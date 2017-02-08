@@ -1,0 +1,19 @@
+{
+  "name": "bumbu.tv_frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BumbuKhan/bumbu.tv_frontend.git"
+  },
+  "author": "BumbuKhan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BumbuKhan/bumbu.tv_frontend/issues"
+  },
+  "homepage": "https://github.com/BumbuKhan/bumbu.tv_frontend#readme"
+}
