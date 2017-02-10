@@ -6,30 +6,43 @@
     <link rel="stylesheet" href="css/primer.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/main-page.css">
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/tilt.jquery.min.js"></script>
+    <script src="js/app.js"></script>
 </head>
 <body>
 
 <div id="wrapper">
     <!--header start-->
-    <header class="header outlined">
-        <div class="container outlined">
-            <div class="columns outlined">
+    <header class="header border-bottom">
+        <div class="container">
+            <div class="columns py-3">
                 <!--header__logo start-->
-                <div class="one-fifth column outlined">
-                    <div class="header__logo">Logo</div>
+                <div class="one-fifth column">
+                    <div class="header__logo pt-2">
+                        <a href="#"><b>BUMBU.TV</b></a>
+                    </div>
                 </div>
                 <!--header__logo   end-->
 
-                <div class="four-fifths column outlined">
-                    <div class="columns outlined">
-                        <div class="three-fourths column outlined">
+                <div class="four-fifths column">
+                    <div class="columns">
+                        <div class="three-fourths column">
                             <!--header__search start-->
-                            <div class="header_search">Search</div>
+                            <div class="header_search">
+                                <form>
+                                    <input class="form-control input-block input-contrast" type="text"
+                                           placeholder="Search">
+                                </form>
+                            </div>
                             <!--header__search   end-->
                         </div>
-                        <div class="one-fourth column outlined">
+                        <div class="one-fourth column">
                             <!--header__signin start-->
-                            <div class="header__signin">Signin</div>
+                            <div class="header__signin clearfix">
+                                <a href="#" class="btn right">Signin</a>
+                            </div>
                             <!--header__signin   end-->
                         </div>
                     </div>
@@ -42,13 +55,23 @@
     <br/>
 
     <!--moovie-list start-->
-    <section class="movie-list outlined">
-        <div class="container outlined">
-            <div class="columns outlined">
+    <section class="movie-list">
+        <div class="container">
+            <div class="columns py-3">
                 <div class="single-column">
                     <!--movie-list-header start-->
-                    <header class="movie-list-header">
-                        Movie list header
+                    <header class="movie-list-header clearfix">
+                        <div class="left">
+                            <h3 class="text-gray">Latest movies</h3>
+                            <span class="text-gray">Lorem ipsum dolor sit amet</span>
+                        </div>
+                        <div class="d-inline-block right">
+                            <a href="#" class="btn btn-outline">All</a>
+                            <div class="btn-group">
+                                <button class="btn" type="button">&larr;</button>
+                                <button class="btn" type="button">&rarr;</button>
+                            </div>
+                        </div>
                     </header>
                     <!--movie-list-header   end-->
                 </div>
@@ -56,32 +79,72 @@
         </div>
 
         <!--movie-list__items start-->
-        <div class="movie-list__items outlined">
-            <div class="container outlined">
+        <div class="movie-list__items">
+            <div class="container">
                 <div class="columns">
-                    <div class="one-fifth column outlined">
+                    <div class="one-fifth column">
                         <!--movie-list__item start-->
-                        <div class="movie-list__item">Movie</div>
+                        <div class="movie-list__item">
+                            <a href="#">
+                                <img src="img/1.jpg" class="img-responsive js-tilt" alt="">
+                            </a>
+                            <div class="mt-2 text-center">
+                                <span class="branch-ref css-truncate css-truncate-target">Game Of Thrones blad na</span>
+                                <i class="branch-ref css-truncate css-truncate-target text-gray text-gray">Fiction, Action, Fantasy, Shimpanze</i>
+                            </div>
+                        </div>
                         <!--movie-list__item   end-->
                     </div>
-                    <div class="one-fifth column outlined">
+                    <div class="one-fifth column">
                         <!--movie-list__item start-->
-                        <div class="movie-list__item">Movie</div>
+                        <div class="movie-list__item">
+                            <a href="#">
+                                <img src="img/2.jpg" class="img-responsive js-tilt" alt="">
+                            </a>
+                            <div class="mt-2 text-center">
+                                <span class="branch-ref css-truncate css-truncate-target">Ice Age</span>
+                                <i class="branch-ref css-truncate css-truncate-target text-gray text-gray">Fiction, Action, Fantasy, Shimpanze</i>
+                            </div>
+                        </div>
                         <!--movie-list__item   end-->
                     </div>
-                    <div class="one-fifth column outlined">
+                    <div class="one-fifth column">
                         <!--movie-list__item start-->
-                        <div class="movie-list__item">Movie</div>
+                        <div class="movie-list__item">
+                            <a href="#">
+                                <img src="img/3.jpg" class="img-responsive js-tilt" alt="">
+                            </a>
+                            <div class="mt-2 text-center">
+                                <span class="branch-ref css-truncate css-truncate-target">1+1</span>
+                                <i class="branch-ref css-truncate css-truncate-target text-gray text-gray">Fiction, Action, Fantasy, Shimpanze</i>
+                            </div>
+                        </div>
                         <!--movie-list__item   end-->
                     </div>
-                    <div class="one-fifth column outlined">
+                    <div class="one-fifth column">
                         <!--movie-list__item start-->
-                        <div class="movie-list__item">Movie</div>
+                        <div class="movie-list__item">
+                            <a href="#">
+                                <img src="img/4.jpg" class="img-responsive js-tilt" alt="">
+                            </a>
+                            <div class="mt-2 text-center">
+                                <span class="branch-ref css-truncate css-truncate-target">Breaking Bad</span>
+                                <i class="branch-ref css-truncate css-truncate-target text-gray text-gray">Fiction, Action, Fantasy, Shimpanze</i>
+                            </div>
+                        </div>
                         <!--movie-list__item   end-->
                     </div>
-                    <div class="one-fifth column outlined">
+                    <div class="one-fifth column">
                         <!--movie-list__item start-->
-                        <div class="movie-list__item">Movie</div>
+                        <div class="movie-list__item">
+                            <a href="#">
+                                <img src="img/1.jpg" class="img-responsive js-tilt" alt="">
+                            </a>
+                            <div class="mt-2 text-center">
+                                <span class="branch-ref css-truncate css-truncate-target">Alf</span>
+                                <i class="branch-ref css-truncate css-truncate-target text-gray text-gray">Fiction, Action, Fantasy, Shimpanze</i>
+                            </div>
+                        </div>
                         <!--movie-list__item   end-->
                     </div>
                 </div>
@@ -91,17 +154,26 @@
     </section>
     <!--moovie-list   end-->
 
-
     <br/>
 
     <!--moovie-list start-->
-    <section class="movie-list outlined">
-        <div class="container outlined">
-            <div class="columns outlined">
+    <section class="movie-list">
+        <div class="container">
+            <div class="columns py-3">
                 <div class="single-column">
                     <!--movie-list-header start-->
-                    <header class="movie-list-header">
-                        Movie list header
+                    <header class="movie-list-header clearfix">
+                        <div class="left">
+                            <h3 class="text-gray">Cartoons</h3>
+                            <span class="text-gray">Lorem ipsum dolor sit amet</span>
+                        </div>
+                        <div class="d-inline-block right">
+                            <a href="#" class="btn btn-outline">All</a>
+                            <div class="btn-group">
+                                <button class="btn" type="button">&larr;</button>
+                                <button class="btn" type="button">&rarr;</button>
+                            </div>
+                        </div>
                     </header>
                     <!--movie-list-header   end-->
                 </div>
@@ -109,32 +181,72 @@
         </div>
 
         <!--movie-list__items start-->
-        <div class="movie-list__items outlined">
-            <div class="container outlined">
+        <div class="movie-list__items">
+            <div class="container">
                 <div class="columns">
-                    <div class="one-fifth column outlined">
+                    <div class="one-fifth column">
                         <!--movie-list__item start-->
-                        <div class="movie-list__item">Movie</div>
+                        <div class="movie-list__item">
+                            <a href="#">
+                                <img src="img/1.jpg" class="img-responsive js-tilt" alt="">
+                            </a>
+                            <div class="mt-2 text-center">
+                                <span class="branch-ref css-truncate css-truncate-target">Game Of Thrones blad na</span>
+                                <i class="branch-ref css-truncate css-truncate-target text-gray">Fiction, Action, Fantasy, Shimpanze</i>
+                            </div>
+                        </div>
                         <!--movie-list__item   end-->
                     </div>
-                    <div class="one-fifth column outlined">
+                    <div class="one-fifth column">
                         <!--movie-list__item start-->
-                        <div class="movie-list__item">Movie</div>
+                        <div class="movie-list__item">
+                            <a href="#">
+                                <img src="img/2.jpg" class="img-responsive js-tilt" alt="">
+                            </a>
+                            <div class="mt-2 text-center">
+                                <span class="branch-ref css-truncate css-truncate-target">Ice Age</span>
+                                <i class="branch-ref css-truncate css-truncate-target text-gray">Fiction, Action, Fantasy, Shimpanze</i>
+                            </div>
+                        </div>
                         <!--movie-list__item   end-->
                     </div>
-                    <div class="one-fifth column outlined">
+                    <div class="one-fifth column">
                         <!--movie-list__item start-->
-                        <div class="movie-list__item">Movie</div>
+                        <div class="movie-list__item">
+                            <a href="#">
+                                <img src="img/3.jpg" class="img-responsive js-tilt" alt="">
+                            </a>
+                            <div class="mt-2 text-center">
+                                <span class="branch-ref css-truncate css-truncate-target">1+1</span>
+                                <i class="branch-ref css-truncate css-truncate-target text-gray">Fiction, Action, Fantasy, Shimpanze</i>
+                            </div>
+                        </div>
                         <!--movie-list__item   end-->
                     </div>
-                    <div class="one-fifth column outlined">
+                    <div class="one-fifth column">
                         <!--movie-list__item start-->
-                        <div class="movie-list__item">Movie</div>
+                        <div class="movie-list__item">
+                            <a href="#">
+                                <img src="img/4.jpg" class="img-responsive js-tilt" alt="">
+                            </a>
+                            <div class="mt-2 text-center">
+                                <span class="branch-ref css-truncate css-truncate-target">Breaking Bad</span>
+                                <i class="branch-ref css-truncate css-truncate-target text-gray">Fiction, Action, Fantasy, Shimpanze</i>
+                            </div>
+                        </div>
                         <!--movie-list__item   end-->
                     </div>
-                    <div class="one-fifth column outlined">
+                    <div class="one-fifth column">
                         <!--movie-list__item start-->
-                        <div class="movie-list__item">Movie</div>
+                        <div class="movie-list__item">
+                            <a href="#">
+                                <img src="img/1.jpg" class="img-responsive js-tilt" alt="">
+                            </a>
+                            <div class="mt-2 text-center">
+                                <span class="branch-ref css-truncate css-truncate-target">Alf</span>
+                                <i class="branch-ref css-truncate css-truncate-target text-gray">Fiction, Action, Fantasy, Shimpanze</i>
+                            </div>
+                        </div>
                         <!--movie-list__item   end-->
                     </div>
                 </div>

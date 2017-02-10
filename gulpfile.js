@@ -5,6 +5,8 @@
 var gulp = require('gulp');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
 
 // watch files for change and reload
 gulp.task('serve', function () {

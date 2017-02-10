@@ -18,6 +18,12 @@
   "homepage": "https://github.com/BumbuKhan/bumbu.tv_frontend#readme",
   "devDependencies": {
     "browser-sync": "^2.18.7",
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^2.0.1"
+  },
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "tilt.js": "^1.1.12"
   }
 }

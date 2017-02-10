@@ -2,6 +2,43 @@
     outline: 1px #333 dotted;
 }
 
+.img-responsive{
+    display: block;
+    max-width: 100%;
+}
+
 #wrapper{
     min-width: 1020px;
+}
+
+.movie-list__item img{
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.movie-list__item img:hover{
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.movie-list__item .css-truncate.css-truncate-target, .movie-list__item .css-truncate .css-truncate-target{
+    max-width: 170px;
+}
+
+.movie-list__item span{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.movie-list__item i{
+    font-size: 12px;
+    font-style: normal;
+}
+
+.movie-list-header .left h3{
+    line-height: 1;
+}
+
+.movie-list-header .left span{
+    font-size: 14px;
 }
