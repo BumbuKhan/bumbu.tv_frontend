@@ -1,0 +1,7 @@
+.outlined{
+    outline: 1px #333 dotted;
+}
+
+#wrapper{
+    min-width: 1020px;
+}
