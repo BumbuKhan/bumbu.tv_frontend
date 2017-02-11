@@ -15,7 +15,7 @@
 
 <div id="wrapper">
     <!--header start-->
-    <header class="header border-bottom">
+    <header class="header border-bottom bg-gray">
         <div class="container">
             <div class="columns py-3">
                 <!--header__logo start-->
@@ -32,7 +32,7 @@
                             <!--header__search start-->
                             <div class="header_search">
                                 <form>
-                                    <input class="form-control input-block input-contrast" type="text"
+                                    <input class="form-control input-block" type="text"
                                            placeholder="Search">
                                 </form>
                             </div>
@@ -56,27 +56,29 @@
 
     <!--moovie-list start-->
     <section class="movie-list">
-        <div class="container">
-            <div class="columns py-3">
-                <div class="single-column">
-                    <!--movie-list-header start-->
-                    <header class="movie-list-header clearfix">
-                        <div class="left">
-                            <h3 class="text-gray">Latest movies</h3>
-                            <span class="text-gray">Lorem ipsum dolor sit amet</span>
-                        </div>
-                        <div class="d-inline-block right">
-                            <a href="#" class="btn btn-outline">All</a>
-                            <div class="btn-group">
-                                <button class="btn" type="button">&larr;</button>
-                                <button class="btn" type="button">&rarr;</button>
+        <!--movie-list-header start-->
+        <div class="movie-list-header">
+            <div class="container">
+                <div class="columns py-3">
+                    <div class="single-column">
+                        <header class="clearfix">
+                            <div class="left">
+                                <h3 class="text-gray-dark">Latest movies</h3>
+                                <span class="text-gray">Lorem ipsum dolor sit amet</span>
                             </div>
-                        </div>
-                    </header>
-                    <!--movie-list-header   end-->
+                            <div class="right">
+                                <a href="#" class="btn btn-outline">All</a>
+                                <div class="btn-group">
+                                    <button class="btn" type="button">&larr;</button>
+                                    <button class="btn" type="button">&rarr;</button>
+                                </div>
+                            </div>
+                        </header>
+                    </div>
                 </div>
             </div>
         </div>
+        <!--movie-list-header   end-->
 
         <!--movie-list__items start-->
         <div class="movie-list__items">
@@ -88,9 +90,10 @@
                             <a href="#">
                                 <img src="img/1.jpg" class="img-responsive js-tilt" alt="">
                             </a>
-                            <div class="mt-2 text-center">
+                            <div class="movie-list__item-desc">
                                 <span class="branch-ref css-truncate css-truncate-target">Game Of Thrones blad na</span>
-                                <i class="branch-ref css-truncate css-truncate-target text-gray text-gray">Fiction, Action, Fantasy, Shimpanze</i>
+                                <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Fiction,
+                                    Action, Fantasy, Shimpanze</i>
                             </div>
                         </div>
                         <!--movie-list__item   end-->
@@ -101,9 +104,10 @@
                             <a href="#">
                                 <img src="img/2.jpg" class="img-responsive js-tilt" alt="">
                             </a>
-                            <div class="mt-2 text-center">
+                            <div class="movie-list__item-desc">
                                 <span class="branch-ref css-truncate css-truncate-target">Ice Age</span>
-                                <i class="branch-ref css-truncate css-truncate-target text-gray text-gray">Fiction, Action, Fantasy, Shimpanze</i>
+                                <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Fiction,
+                                    Action, Fantasy, Shimpanze</i>
                             </div>
                         </div>
                         <!--movie-list__item   end-->
@@ -114,9 +118,10 @@
                             <a href="#">
                                 <img src="img/3.jpg" class="img-responsive js-tilt" alt="">
                             </a>
-                            <div class="mt-2 text-center">
+                            <div class="movie-list__item-desc">
                                 <span class="branch-ref css-truncate css-truncate-target">1+1</span>
-                                <i class="branch-ref css-truncate css-truncate-target text-gray text-gray">Fiction, Action, Fantasy, Shimpanze</i>
+                                <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Fiction,
+                                    Action, Fantasy, Shimpanze</i>
                             </div>
                         </div>
                         <!--movie-list__item   end-->
@@ -127,9 +132,10 @@
                             <a href="#">
                                 <img src="img/4.jpg" class="img-responsive js-tilt" alt="">
                             </a>
-                            <div class="mt-2 text-center">
+                            <div class="movie-list__item-desc">
                                 <span class="branch-ref css-truncate css-truncate-target">Breaking Bad</span>
-                                <i class="branch-ref css-truncate css-truncate-target text-gray text-gray">Fiction, Action, Fantasy, Shimpanze</i>
+                                <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Fiction,
+                                    Action, Fantasy, Shimpanze</i>
                             </div>
                         </div>
                         <!--movie-list__item   end-->
@@ -140,9 +146,10 @@
                             <a href="#">
                                 <img src="img/1.jpg" class="img-responsive js-tilt" alt="">
                             </a>
-                            <div class="mt-2 text-center">
+                            <div class="movie-list__item-desc">
                                 <span class="branch-ref css-truncate css-truncate-target">Alf</span>
-                                <i class="branch-ref css-truncate css-truncate-target text-gray text-gray">Fiction, Action, Fantasy, Shimpanze</i>
+                                <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Fiction,
+                                    Action, Fantasy, Shimpanze</i>
                             </div>
                         </div>
                         <!--movie-list__item   end-->
@@ -158,27 +165,29 @@
 
     <!--moovie-list start-->
     <section class="movie-list">
-        <div class="container">
-            <div class="columns py-3">
-                <div class="single-column">
-                    <!--movie-list-header start-->
-                    <header class="movie-list-header clearfix">
-                        <div class="left">
-                            <h3 class="text-gray">Cartoons</h3>
-                            <span class="text-gray">Lorem ipsum dolor sit amet</span>
-                        </div>
-                        <div class="d-inline-block right">
-                            <a href="#" class="btn btn-outline">All</a>
-                            <div class="btn-group">
-                                <button class="btn" type="button">&larr;</button>
-                                <button class="btn" type="button">&rarr;</button>
+        <!--movie-list-header start-->
+        <div class="movie-list-header">
+            <div class="container">
+                <div class="columns py-3">
+                    <div class="single-column">
+                        <header class="clearfix">
+                            <div class="left">
+                                <h3 class="text-gray-dark">Latest cartoons</h3>
+                                <span class="text-gray">Lorem ipsum dolor sit amet</span>
                             </div>
-                        </div>
-                    </header>
-                    <!--movie-list-header   end-->
+                            <div class="right">
+                                <a href="#" class="btn btn-outline">All</a>
+                                <div class="btn-group">
+                                    <button class="btn" type="button">&larr;</button>
+                                    <button class="btn" type="button">&rarr;</button>
+                                </div>
+                            </div>
+                        </header>
+                    </div>
                 </div>
             </div>
         </div>
+        <!--movie-list-header   end-->
 
         <!--movie-list__items start-->
         <div class="movie-list__items">
@@ -190,9 +199,10 @@
                             <a href="#">
                                 <img src="img/1.jpg" class="img-responsive js-tilt" alt="">
                             </a>
-                            <div class="mt-2 text-center">
+                            <div class="movie-list__item-desc">
                                 <span class="branch-ref css-truncate css-truncate-target">Game Of Thrones blad na</span>
-                                <i class="branch-ref css-truncate css-truncate-target text-gray">Fiction, Action, Fantasy, Shimpanze</i>
+                                <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Fiction,
+                                    Action, Fantasy, Shimpanze</i>
                             </div>
                         </div>
                         <!--movie-list__item   end-->
@@ -203,9 +213,10 @@
                             <a href="#">
                                 <img src="img/2.jpg" class="img-responsive js-tilt" alt="">
                             </a>
-                            <div class="mt-2 text-center">
+                            <div class="movie-list__item-desc">
                                 <span class="branch-ref css-truncate css-truncate-target">Ice Age</span>
-                                <i class="branch-ref css-truncate css-truncate-target text-gray">Fiction, Action, Fantasy, Shimpanze</i>
+                                <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Fiction,
+                                    Action, Fantasy, Shimpanze</i>
                             </div>
                         </div>
                         <!--movie-list__item   end-->
@@ -216,9 +227,10 @@
                             <a href="#">
                                 <img src="img/3.jpg" class="img-responsive js-tilt" alt="">
                             </a>
-                            <div class="mt-2 text-center">
+                            <div class="movie-list__item-desc">
                                 <span class="branch-ref css-truncate css-truncate-target">1+1</span>
-                                <i class="branch-ref css-truncate css-truncate-target text-gray">Fiction, Action, Fantasy, Shimpanze</i>
+                                <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Fiction,
+                                    Action, Fantasy, Shimpanze</i>
                             </div>
                         </div>
                         <!--movie-list__item   end-->
@@ -229,9 +241,10 @@
                             <a href="#">
                                 <img src="img/4.jpg" class="img-responsive js-tilt" alt="">
                             </a>
-                            <div class="mt-2 text-center">
+                            <div class="movie-list__item-desc">
                                 <span class="branch-ref css-truncate css-truncate-target">Breaking Bad</span>
-                                <i class="branch-ref css-truncate css-truncate-target text-gray">Fiction, Action, Fantasy, Shimpanze</i>
+                                <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Fiction,
+                                    Action, Fantasy, Shimpanze</i>
                             </div>
                         </div>
                         <!--movie-list__item   end-->
@@ -242,9 +255,10 @@
                             <a href="#">
                                 <img src="img/1.jpg" class="img-responsive js-tilt" alt="">
                             </a>
-                            <div class="mt-2 text-center">
+                            <div class="movie-list__item-desc">
                                 <span class="branch-ref css-truncate css-truncate-target">Alf</span>
-                                <i class="branch-ref css-truncate css-truncate-target text-gray">Fiction, Action, Fantasy, Shimpanze</i>
+                                <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Fiction,
+                                    Action, Fantasy, Shimpanze</i>
                             </div>
                         </div>
                         <!--movie-list__item   end-->
