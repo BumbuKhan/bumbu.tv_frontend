@@ -217,3 +217,21 @@
     animation-fill-mode: forwards;
 }
 /* block: series-list   end */
+
+
+/* block: ted-list start */
+.ted-list__item img{
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.ted-list__item span{
+    display: block;
+    margin-top: 5px;
+    height: 43px;
+    overflow-y: hidden;
+    font-size: 14px;
+    font-weight: bold;
+}
+/* block: ted-list   end */
