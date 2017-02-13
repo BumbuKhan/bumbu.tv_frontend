@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "primer-module-build ./app/src/css/index.scss ./app/dist/css/"
   },
   "repository": {
     "type": "git",
@@ -23,10 +24,14 @@
     "gulp-concat": "^2.6.1",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.4.1",
-    "gulp-uglify": "^2.0.1"
+    "gulp-uglify": "^2.0.1",
+    "primer-module-build": "*"
   },
   "dependencies": {
     "jquery": "^3.1.1",
-    "tilt.js": "^1.1.12"
+    "tilt.js": "^1.1.12",
+    "primer-core": "^1.0.0",
+    "primer-marketing": "^1.0.0",
+    "primer-product": "^1.0.0"
   }
 }

@@ -35,9 +35,11 @@ gulp.task('sass:watch', function () {
     gulp.watch('./app/css/**/*.scss', ['sass']);
 });
 
-
 // clean dist folder
 gulp.task('clean', function () {
     return gulp.src('app/dist', {read: false})
         .pipe(clean());
 });
+
+// chainig default task
+gulp.task('default', ['clean', 'sass', 'sass:watch', 'serve']);
