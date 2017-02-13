@@ -11,6 +11,12 @@
     min-width: 1020px;
 }
 
+/* blocks: common styles start */
+.movie-list, .series-list, .ted-list{
+    margin-top: 30px;
+}
+/* blocks: common styles   end */
+
 /* block: movie-list-header start */
 .movie-list-header .left h3 {
     line-height: 1;
@@ -195,3 +201,19 @@
 }
 
 /* block: ted-list   end */
+
+/* block: footer start */
+.footer__items{
+    list-style-type: none;
+}
+
+.footer__items li{
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 13px;
+}
+
+.footer__items li:first-child{
+    margin-left: 0;
+}
+/* block: footer   end */
