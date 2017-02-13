@@ -203,6 +203,11 @@
 /* block: ted-list   end */
 
 /* block: footer start */
+.footer{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 .footer__items{
     list-style-type: none;
 }
