@@ -41,5 +41,23 @@ gulp.task('clean', function () {
         .pipe(clean());
 });
 
+// move img
+gulp.task('move_img', function () {
+    return gulp.src('./app/src/img/*.*')
+        .pipe(gulp.dest('./app/dist/img/'))
+});
+
+// move js
+gulp.task('move_js', function () {
+    return gulp.src('./app/src/js/*.*')
+        .pipe(gulp.dest('./app/dist/js/'))
+});
+
+// move css
+gulp.task('move_css', function () {
+    return gulp.src('./app/src/css/*.css')
+        .pipe(gulp.dest('./app/dist/css/'))
+});
+
 // chainig default task
-gulp.task('default', ['clean', 'sass', 'sass:watch', 'serve']);
+gulp.task('default', ['clean', 'sass', 'sass:watch', 'move_img', 'move_js', 'move_css', 'serve']);
