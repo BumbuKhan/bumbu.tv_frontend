@@ -1,6 +1,4 @@
 # Created by .ignore support plugin (hsz.mobi)
 .idea/
 node_modules/
-!node_modules/primer-module-build/index.js
-!node_modules/primer-module-build/lib/build.js
 app/dist/
