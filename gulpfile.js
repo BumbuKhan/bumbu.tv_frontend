@@ -32,7 +32,7 @@ gulp.task('sass', function () {
 
 // watch after *.scss
 gulp.task('sass:watch', function () {
-    gulp.watch('./app/css/**/*.scss', ['sass']);
+    gulp.watch('./app/src/css/**/*.scss', ['sass']);
 });
 
 // clean dist folder
