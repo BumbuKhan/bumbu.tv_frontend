@@ -9,6 +9,8 @@ var reload = browserSync.reload;
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var clean = require('gulp-clean');
+var cssmin = require('gulp-cssmin');
+var rename = require('gulp-rename');
 
 // watch files for change and reload
 gulp.task('serve', function () {
@@ -26,6 +28,8 @@ gulp.task('sass', function () {
     return gulp.src('./app/src/css/**/*.scss')
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
+        .pipe(cssmin())
+        .pipe(rename({suffix: '.min'}))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('./app/dist/css'));
 });
