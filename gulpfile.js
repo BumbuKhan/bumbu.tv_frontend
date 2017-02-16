@@ -58,6 +58,11 @@ gulp.task('move_js', function () {
         .pipe(gulp.dest('./app/dist/js/'))
 });
 
+// watch after *.js
+gulp.task('js:watch', function () {
+    gulp.watch('./app/src/js/**/*.js', ['move_js']);
+});
+
 // move css
 gulp.task('move_css', function () {
     return gulp.src('./app/src/css/*.css')
@@ -71,4 +76,4 @@ gulp.task('move_font', function () {
 });
 
 // chainig default task
-gulp.task('default', gulpSequence('clean', 'sass', 'sass:watch', 'move_img', 'move_js', 'move_css', 'move_font', 'serve'));
+gulp.task('default', gulpSequence('clean', 'sass', 'sass:watch', 'move_img', 'move_js', 'js:watch', 'move_css', 'move_font', 'serve'));

@@ -5,6 +5,8 @@
     <title>Bumbu.tv - view movie</title>
     <link rel="stylesheet" href="dist/css/primer.css">
     <link rel="stylesheet" href="dist/css/app.min.css">
+    <link rel="stylesheet" href="dist/css/video-js.css">
+    <link rel="stylesheet" href="dist/css/video-player.css">
 </head>
 <body>
 
@@ -91,6 +93,28 @@
         </div>
     </section>
     <!--movie-view   end-->
+
+    <!--video-player start-->
+    <div class="video-player">
+        <div class="container">
+            <div class="columns">
+                <div class="single-column">
+
+                    <video id="bumbu-player" class="video-js vjs-big-play-centered vjs-bumbu-skin"
+                           controls preload="auto" width="980" height="400"
+                           poster="">
+                        <source src="src/video/ed/ed_hd.mp4" type="video/mp4"/>
+                        <source src="src/video/ed/ed_hd.ogv" type="video/ogg"/>
+                        <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a
+                            web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports
+                                HTML5 video</a></p>
+                    </video>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--video-player   end-->
 
     <!--moovie-list start-->
     <section class="movie-list">
@@ -223,6 +247,7 @@
 <script src="dist/js/jquery-3.1.1.min.js"></script>
 <script src="dist/js/tilt.jquery.min.js"></script>
 <script src="dist/js/video.min.js"></script>
+<script src="dist/js/video-player.js"></script>
 <script src="dist/js/app.js"></script>
 </body>
 </html>
