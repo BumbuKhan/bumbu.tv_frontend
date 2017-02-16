@@ -1,6 +1,12 @@
 @import "_variables";
 @import "mixins/_border_radius";
 @import "mixins/box_shadow";
+@import "blocks/movie-list-header";
+@import "blocks/movie-list";
+@import "blocks/series-list";
+@import "blocks/ted-list";
+@import "blocks/movie-view";
+@import "blocks/footer";
 
 .outlined {
   outline: 1px red dotted;
@@ -21,21 +27,3 @@
 }
 
 // blocks: common styles   end
-
-// block: movie-list-header start
-@import "blocks/movie-list-header";
-
-// block: movie-list start
-@import "blocks/movie-list";
-
-// block: series-list start
-@import "blocks/series-list";
-
-// block: ted-list start
-@import "blocks/ted-list";
-
-// block: movie-view start
-@import "blocks/movie-view";
-
-// block: footer start
-@import "blocks/footer";

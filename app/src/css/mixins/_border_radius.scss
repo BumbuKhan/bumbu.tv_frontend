@@ -4,8 +4,7 @@
     -moz-border-#{$part}-radius: $radius;
     -ms-border-#{$part}-radius: $radius;
     border-#{$part}-radius: $radius;
-  }
-  @else {
+  } @else {
     -webkit-border-radius: $radius;
     -moz-border-radius: $radius;
     -ms-border-radius: $radius;
@@ -27,8 +26,7 @@
     @if ($top-left) {
       @include border-radius-partial($radius, 'top-left');
     }
-  }
-  @else {
+  } @else {
     @include border-radius-partial($radius);
   }
 }
