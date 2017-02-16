@@ -11,6 +11,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var clean = require('gulp-clean');
 var cssmin = require('gulp-cssmin');
 var rename = require('gulp-rename');
+var gulpSequence = require('gulp-sequence');
 
 // watch files for change and reload
 gulp.task('serve', function () {
@@ -63,5 +64,11 @@ gulp.task('move_css', function () {
         .pipe(gulp.dest('./app/dist/css/'))
 });
 
+// move font
+gulp.task('move_font', function () {
+    return gulp.src('./app/src/font/*')
+        .pipe(gulp.dest('./app/dist/font/'))
+});
+
 // chainig default task
-gulp.task('default', ['clean', 'sass', 'sass:watch', 'move_img', 'move_js', 'move_css', 'serve']);
+gulp.task('default', gulpSequence('clean', 'sass', 'sass:watch', 'move_img', 'move_js', 'move_css', 'move_font', 'serve'));
