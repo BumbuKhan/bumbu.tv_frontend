@@ -1,0 +1,59 @@
+.series-list__item {
+  position: relative;
+  overflow: hidden;
+  @include border-radius($poster-border-radius);
+}
+
+.series-list__item a {
+  display: block;
+  height: 250px;
+}
+
+.series-list__item a span {
+  display: block;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.series-list__item-title {
+  top: 15px;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+
+.series-list__item-genres {
+  top: 43px;
+  font-size: 12px;
+  font-weight: 100;
+  opacity: .5;
+}
+
+.series-list__item a img {
+  display: inline-block;
+  position: absolute;
+  top: 120px;
+  z-index: 2;
+  width: 120px;
+  @include border-radius($poster-border-radius);
+  outline: 1px solid transparent;
+}
+
+.series-list__item-poster-left {
+  left: 15px;
+}
+
+.series-list__item .series-list__item-poster-middle {
+  z-index: 3;
+  width: 160px;
+  left: 76px;
+  top: 80px;
+  @include box-shadow($series-poster-box-shadow);
+}
+
+.series-list__item-poster-right {
+  right: 15px;
+}

@@ -1,0 +1,55 @@
+.ted-list__item {
+  position: relative;
+
+  img {
+    @include border-radius($poster-border-radius, true, false, false, true);
+    position: relative;
+    z-index: 1;
+  }
+
+  a {
+    color: #333333;
+    text-decoration: none;
+  }
+
+  i {
+    font-style: normal;
+    font-size: 11px;
+    display: inline-block;
+    line-height: 1;
+    padding: 4px 8px 3px 8px;
+    position: absolute;
+    right: 8px;
+    top: 100px;
+    z-index: 20;
+    color: #ffffff;
+    font-weight: bold;
+    background: rgba(0, 0, 0, .7);
+    @include border-radius($poster-border-radius);
+  }
+}
+
+.ted-list__item-desc {
+  border: 1px #f3f3f3 solid;
+  border-top: none;
+  height: 63px;
+  padding: 6px 10px;
+  overflow-y: hidden;
+  @include border-radius($poster-border-radius, false, true, true, false);
+  @include box-shadow($ted-item-box-shadow);
+
+  span {
+    display: inherit;
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: bold;
+  }
+}
+
+.ted-list__ted-description .blankslate {
+  min-height: 188px;
+
+  h3 {
+    color: #D0261B;
+  }
+}

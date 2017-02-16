@@ -1,0 +1,30 @@
+.movie-list__item {
+  position: relative;
+
+  img {
+    @include border-radius($poster-border-radius);
+    z-index: 1;
+  }
+
+  img:hover {
+    @include box-shadow($poster-box-shadow);
+  }
+
+  .css-truncate.css-truncate-target, .css-truncate .css-truncate-target {
+    max-width: 170px;
+  }
+}
+
+.movie-list__item-desc {
+  text-align: center;
+  margin-top: 15px;
+
+  span {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  i {
+    font-style: normal;
+  }
+}
