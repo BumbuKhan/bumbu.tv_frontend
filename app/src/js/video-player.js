@@ -27,7 +27,7 @@
 //                  VolumeHandle
 //          MuteToggle
 
-// read more http://docs.videojs.com/docs/guides/components.html
+// read more about creating and embedding components here: http://docs.videojs.com/docs/guides/components.html
 
 $(document).ready(function () {
     var bumbuPlayer = videojs('bumbu-player', {
