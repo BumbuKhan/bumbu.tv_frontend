@@ -2,6 +2,8 @@
  * Created by BumbuKhan on 16.02.2017.
  */
 
+// Videojs Documentation: http://docs.videojs.com/
+
 // The actual default component structure of the Video.js player looks something like this:
 
 // Player
@@ -33,13 +35,14 @@ $(document).ready(function () {
     var bumbuPlayer = videojs('bumbu-player', {
         controlBar: {
             muteToggle: false,
-            fullscreenToggle: false,
-            remainingTimeDisplay: false,
-            progressControl: false
+            fullscreenToggle: true,
+            remainingTimeDisplay: true,
+            progressControl: true
         },
         "controls": true,
         "preload": "auto"
     }, function () {
         console.log('Player is initialized and ready.');
     });
+
 });
