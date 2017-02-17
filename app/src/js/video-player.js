@@ -5,7 +5,6 @@
 // Videojs Documentation: http://docs.videojs.com/
 
 
-
 // The actual default component structure of the Video.js player looks something like this:
 
 // Player
@@ -34,7 +33,6 @@
 // read more about creating and embedding components here: http://docs.videojs.com/docs/guides/components.html
 
 
-
 // In order to check browser use videojs.browser, it returns an object with following structure:
 
 // ANDROID_VERSION : null
@@ -58,45 +56,70 @@
 // __esModule : true
 
 $(document).ready(function () {
+
+    // Get the Component base class from Video.js
+    var Component = videojs.getComponent('Component');
+
+    // The videojs.extend function is used to assist with inheritance. In
+    // an ES6 environment, `class TitleBar extends Component` would work
+    // identically.
+    var TitleBar = videojs.extend(Component, {
+
+        // The constructor of a component receives two arguments: the
+        // player it will be associated with and an object of options.
+        constructor: function (player, options) {
+
+            // It is important to invoke the superclass before anything else,
+            // to get all the features of components out of the box!
+            Component.apply(this, options);
+
+            // If a `text` option was passed in, update the text content of
+            // the component.
+            if (options.text) {
+                this.updateTextContent(options.text);
+            }
+        },
+
+        // The `createEl` function of a component creates its DOM element.
+        createEl: function () {
+            return videojs.dom.createEl('div', {
+                // Prefixing classes of elements within a player with "vjs-"
+                // is a convention used in Video.js.
+                className: 'vjs-title-bar'
+            });
+        },
+
+        // This function could be called at any time to update the text
+        // contents of the component.
+        updateTextContent: function (text) {
+            // If no text was provided, default to "Title Unknown"
+            if (typeof text !== 'string') {
+                text = 'Unknown title';
+            }
+
+            // Use Video.js utility DOM methods to manipulate the content
+            // of the component's element.
+            videojs.dom.emptyEl(this.el());
+            videojs.dom.appendContent(this.el(), text);
+        }
+    });
+
+    // Register the component with Video.js, so it can be used in players.
+    videojs.registerComponent('TitleBar', TitleBar);
+
     var bumbuPlayer = videojs('bumbu-player', {
         controlBar: {
-            muteToggle: false,
             fullscreenToggle: true,
-            remainingTimeDisplay: true,
-            progressControl: true
+            remainingTimeDisplay: true
         },
         "controls": true,
         "preload": "auto"
     }, function () {
         console.log('Player is initialized and ready.');
-        /*var thisPlayer = this;
-
-        thisPlayer.currentTime(120);
-        thisPlayer.play();
-
-        console.log(thisPlayer);*/
-        //console.log(videojs.VERSION);
-        //console.log(videojs.players);
-        //console.log(videojs.getComponent);
-        //console.log(videojs.browser);
-        // console.log(videojs.extend);
-        //console.log(videojs.getPlugins());
-        //console.log(videojs.log());
-        //videojs.formatTime = 'H:MM:SS';
-        //console.log(videojs.parseUrl());
-        // console.log(videojs.isCrossOrigin());
-
-        //console.log(videojs.TextTrack);
-
-        //console.log(videojs.dom.createEl());
-
-        //console.log(videojs.dom.createEl());
-        //console.log(videojs.dom.toggleClass(videojs.dom.createEl(), 'active'));
-
-        //console.log(videojs.url.getAbsoluteURL('google.ru'));
-
     });
 
-    //console.log(videojs.getPlayers());
+    // Add the TitleBar as a child of the player and provide it some text
+    // in its options.
+    bumbuPlayer.addChild('TitleBar', {text: 'Обитель зла'});
 
 });
