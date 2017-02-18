@@ -349,9 +349,9 @@ body.vjs-full-window {
 
 .video-js .vjs-big-play-button {
   font-size: 3em;
-  line-height: 1.5em;
-  height: 1.5em;
-  width: 3em;
+  line-height: 1.9em;
+  height: 2em;
+  width: 2em;
   display: block;
   position: absolute;
   top: 10px;
@@ -362,9 +362,9 @@ body.vjs-full-window {
   border: 0.06666em solid #fff;
   background-color: #2B333F;
   background-color: rgba(43, 51, 63, 0.7);
-  -webkit-border-radius: 0.3em;
-  -moz-border-radius: 0.3em;
-  border-radius: 0.3em;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
   -webkit-transition: all 0.4s;
   -moz-transition: all 0.4s;
   -ms-transition: all 0.4s;
@@ -662,7 +662,7 @@ body.vjs-full-window {
   -ms-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
-  height: 0.3em; }
+  height: 0.5em; }
 
 .video-js .vjs-progress-control .vjs-progress-holder {
   margin: 0 10px; }
@@ -675,7 +675,7 @@ body.vjs-full-window {
 .video-js .vjs-progress-holder .vjs-load-progress div {
   position: absolute;
   display: block;
-  height: 0.3em;
+  height: 0.5em;
   margin: 0;
   padding: 0;
   width: 0;
@@ -685,7 +685,7 @@ body.vjs-full-window {
 .video-js .vjs-play-progress {
   background-color: #fff; }
   .video-js .vjs-play-progress:before {
-    font-size: 0.9em;
+    font-size: 1.4em;
     position: absolute;
     right: -0.5em;
     top: -0.333333333333333em;
@@ -927,7 +927,7 @@ body.vjs-full-window {
 
 .vjs-volume-bar.vjs-slider-horizontal {
   width: 5em;
-  height: 0.3em; }
+  height: 0.5em; }
 
 .vjs-volume-bar.vjs-slider-vertical {
   width: 0.3em;
@@ -941,7 +941,7 @@ body.vjs-full-window {
   background-color: #fff; }
   .video-js .vjs-volume-level:before {
     position: absolute;
-    font-size: 0.9em; }
+    font-size: 1.4em; }
 
 .vjs-slider-vertical .vjs-volume-level {
   width: 0.3em; }
@@ -950,7 +950,7 @@ body.vjs-full-window {
     left: -0.3em; }
 
 .vjs-slider-horizontal .vjs-volume-level {
-  height: 0.3em; }
+  height: 0.5em; }
   .vjs-slider-horizontal .vjs-volume-level:before {
     top: -0.3em;
     right: -0.5em; }

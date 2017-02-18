@@ -133,9 +133,9 @@ $(document).ready(function () {
         controlBar: {
             fullscreenToggle: true,
             remainingTimeDisplay: true,
+            currentTimeDisplay: true
         },
 
-        TitleBar: false,
         "controls": true,
         "preload": "auto"
     }, function () {
