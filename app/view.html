@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="dist/css/primer.css">
     <link rel="stylesheet" href="dist/css/app.min.css">
     <link rel="stylesheet" href="dist/css/video-js.css">
+    <link rel="stylesheet" href="dist/css/videojs.caption.css">
     <link rel="stylesheet" href="dist/css/video-player.css">
 </head>
 <body>
@@ -105,7 +106,7 @@
                         <source src="src/video/ed/ed_hd.mp4" type="video/mp4"/>
                         <source src="src/video/ed/ed_hd.ogv" type="video/ogg"/>
 
-                        <track kind="captions" src="src/video/ed/captions.en.vtt" srclang="en" label="English" default>
+                        <track kind="subtitles" src="src/video/ed/captions.en.vtt" srclang="en" label="English" default>
 
                         <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a
                             web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports
@@ -251,6 +252,7 @@
 <!--<script src="dist/js/video.min.js"></script>-->
 <script src="dist/js/video.js"></script>
 <script src="dist/js/video-player-plugins/videojs.hotkey.js"></script>
+<script src="dist/js/video-player-plugins/videojs.caption.js"></script>
 <script src="dist/js/video-player.js"></script>
 <script src="dist/js/app.js"></script>
 </body>

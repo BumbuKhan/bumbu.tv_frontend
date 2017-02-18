@@ -55,6 +55,9 @@
 // TOUCH_ENABLED : undefined
 // __esModule : true
 
+
+// read more about caption plugin here: http://www.sampingchuang.com/videojs-caption
+
 $(document).ready(function () {
     /*// Get the Component base class from Video.js
      var Component = videojs.getComponent('Component');
@@ -126,10 +129,33 @@ $(document).ready(function () {
      //     }
      // });
 
+
+     //var tracks = bumbuPlayer.textTracks();
+     //console.log(tracks);
      */
-    //
+
+    var captionJson = [
+        {
+            "data": "This is a roll up example.",
+            "startTime": 0,
+            "endTime": 1000
+        },
+        {
+            "data": "As you can see,",
+            "startTime": 1000,
+            "endTime": 2000
+        },
+        {
+            "data": "the caption is being pushed up.",
+            "startTime": 2000,
+            "endTime": 3000
+        }
+    ];
 
     var bumbuPlayer = videojs('bumbu-player', {
+        html5: {
+            nativeTextTracks: false
+        },
         controlBar: {
             fullscreenToggle: true,
             remainingTimeDisplay: true,
@@ -146,5 +172,12 @@ $(document).ready(function () {
             seekStep: 5,
             enableModifiersForNumbers: false
         });
+    });
+
+    bumbuPlayer.caption({
+        data: captionJson,
+        setting: {
+            captionType: 'roll-up'
+        }
     });
 });
