@@ -108,7 +108,26 @@ $(document).ready(function () {
 
      // Add the TitleBar as a child of the player and provide it some text
      // in its options.
-     bumbuPlayer.addChild('TitleBar', {text: 'Movie\'s title'});*/
+     bumbuPlayer.addChild('TitleBar', {text: 'Movie\'s title'});
+
+
+     bumbuPlayer.on('keydown', function (e) {
+     //     if (e.keyCode == 32) {
+     //         console.log('Spase button pressed (keyCode: 32)');
+     //         e.preventDefault();
+     //
+     //         if (this.paused()) {
+     //             console.log('player is paused');
+     //             this.play();
+     //         } else {
+     //             console.log('player is playing');
+     //             this.pause();
+     //         }
+     //     }
+     // });
+
+     */
+    //
 
     var bumbuPlayer = videojs('bumbu-player', {
         controlBar: {
@@ -121,20 +140,11 @@ $(document).ready(function () {
         "preload": "auto"
     }, function () {
         console.log('Player is initialized and ready.');
-    });
 
-    bumbuPlayer.on('keydown', function (e) {
-        if (e.keyCode == 32) {
-            console.log('Spase button pressed (keyCode: 32)');
-            e.preventDefault();
-
-            if(this.paused()){
-                console.log('player is paused');
-                this.play();
-            } else {
-                console.log('player is playing');
-                this.pause();
-            }
-        }
+        this.hotkeys({
+            volumeStep: 0.1,
+            seekStep: 5,
+            enableModifiersForNumbers: false
+        });
     });
 });

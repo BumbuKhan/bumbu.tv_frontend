@@ -54,7 +54,7 @@ gulp.task('move_img', function () {
 
 // move js
 gulp.task('move_js', function () {
-    return gulp.src('./app/src/js/*.*')
+    return gulp.src('./app/src/js/**/*.*')
         .pipe(gulp.dest('./app/dist/js/'))
 });
 
