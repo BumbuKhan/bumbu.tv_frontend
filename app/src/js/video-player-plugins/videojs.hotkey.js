@@ -248,7 +248,7 @@
             }
         };
 
-        var mouseScroll = function mouseScroll(event) {
+        /*var mouseScroll = function mouseScroll(event) {
             // When controls are disabled, hotkeys will be disabled as well
             if (player.controls()) {
                 var activeEl = event.relatedTarget || event.toElement || doc.activeElement;
@@ -271,7 +271,7 @@
                     }
                 }
             }
-        };
+        };*/
 
         var checkKeys = function checkKeys(e, player) {
             // Allow some modularity in defining custom hotkeys
@@ -349,8 +349,8 @@
 
         player.on('keydown', keyDown);
         player.on('dblclick', doubleClick);
-        player.on('mousewheel', mouseScroll);
-        player.on("DOMMouseScroll", mouseScroll);
+        //player.on('mousewheel', mouseScroll);
+        //player.on("DOMMouseScroll", mouseScroll);
 
         return this;
     };
