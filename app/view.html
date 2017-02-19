@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Bumbu.tv - view movie</title>
     <link rel="stylesheet" href="dist/css/font-awesome.min.css">
+    <link rel="stylesheet" href="dist/css/owl.carousel.min.css">
     <link rel="stylesheet" href="dist/css/primer.css">
     <link rel="stylesheet" href="dist/css/app.min.css">
     <link rel="stylesheet" href="dist/css/video-js.css">
@@ -126,18 +127,20 @@
         <!--movie-list-header start-->
         <div class="movie-list-header">
             <div class="container">
-                <div class="columns py-3">
+                <div class="columns pt-3">
                     <div class="single-column">
                         <header class="clearfix">
                             <div class="left">
-                                <h3 class="text-gray-dark">Keep watching</h3>
+                                <h3 class="text-gray-dark">Movies</h3>
                                 <span class="text-gray">Lorem ipsum dolor sit amet</span>
                             </div>
                             <div class="right">
                                 <a href="#" class="btn btn-outline">All</a>
                                 <div class="btn-group">
-                                    <button class="btn" type="button">&larr;</button>
-                                    <button class="btn" type="button">&rarr;</button>
+                                    <button class="btn" type="button" data-carousel="movies" data-direction="prev"><i class="fa fa-arrow-left"
+                                                                                                                      aria-hidden="true"></i></button>
+                                    <button class="btn" type="button"data-carousel="movies" data-direction="next"><i class="fa fa-arrow-right"
+                                                                                                                     aria-hidden="true"></i></button>
                                 </div>
                             </div>
                         </header>
@@ -151,75 +154,151 @@
         <div class="movie-list__items">
             <div class="container">
                 <div class="columns">
-                    <div class="one-fifth column">
-                        <!--movie-list__item start-->
-                        <div class="movie-list__item">
-                            <a href="#">
-                                <img src="dist/img/1.jpg" class="img-responsive js-tilt" alt="">
-                            </a>
-                            <div class="movie-list__item-desc">
+                    <div class="owl-carousel js-movie-carousel">
+                        <div class="single-column">
+                            <!--movie-list__item start-->
+                            <div class="movie-list__item">
+                                <a href="#">
+                                    <img src="dist/img/1.jpg" class="img-responsive js-tilt" alt="">
+                                </a>
+                                <div class="movie-list__item-desc">
                                 <span class="branch-ref css-truncate css-truncate-target"
                                       title="Обитель зла 6: Последняя глава (2017)">Обитель зла 6: Последняя глава (2017)</span>
-                                <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Ужасы,
-                                    Фантастика, Боевик</i>
+                                    <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Ужасы,
+                                        Фантастика, Боевик</i>
+                                </div>
                             </div>
+                            <!--movie-list__item   end-->
                         </div>
-                        <!--movie-list__item   end-->
-                    </div>
-                    <div class="one-fifth column">
-                        <!--movie-list__item start-->
-                        <div class="movie-list__item">
-                            <a href="#">
-                                <img src="dist/img/2.jpg" class="img-responsive js-tilt" alt="">
-                            </a>
-                            <div class="movie-list__item-desc">
+                        <div class="single-column">
+                            <!--movie-list__item start-->
+                            <div class="movie-list__item">
+                                <a href="#">
+                                    <img src="dist/img/2.jpg" class="img-responsive js-tilt" alt="">
+                                </a>
+                                <div class="movie-list__item-desc">
                                 <span class="branch-ref css-truncate css-truncate-target"
                                       title="Крест. Часть вторая: Двойной обман (2017)">Крест. Часть вторая: Двойной обман (2017)</span>
-                                <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Боевик</i>
+                                    <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Боевик</i>
+                                </div>
                             </div>
+                            <!--movie-list__item   end-->
                         </div>
-                        <!--movie-list__item   end-->
-                    </div>
-                    <div class="one-fifth column">
-                        <!--movie-list__item start-->
-                        <div class="movie-list__item">
-                            <a href="#">
-                                <img src="dist/img/3.jpg" class="img-responsive js-tilt" alt="">
-                            </a>
-                            <div class="movie-list__item-desc">
+                        <div class="single-column">
+                            <!--movie-list__item start-->
+                            <div class="movie-list__item">
+                                <a href="#">
+                                    <img src="dist/img/3.jpg" class="img-responsive js-tilt" alt="">
+                                </a>
+                                <div class="movie-list__item-desc">
                                 <span class="branch-ref css-truncate css-truncate-target"
                                       title="На пятьдесят оттенков темнее (2017)">На пятьдесят оттенков темнее (2017)</span>
-                                <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Мелодрама</i>
+                                    <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Мелодрама</i>
+                                </div>
                             </div>
+                            <!--movie-list__item   end-->
                         </div>
-                        <!--movie-list__item   end-->
-                    </div>
-                    <div class="one-fifth column">
-                        <!--movie-list__item start-->
-                        <div class="movie-list__item">
-                            <a href="#">
-                                <img src="dist/img/4.jpg" class="img-responsive js-tilt" alt="">
-                            </a>
-                            <div class="movie-list__item-desc">
-                                <span class="branch-ref css-truncate css-truncate-target" title="Команда мечты (2016)">Команда мечты (2016)</span>
-                                <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Комедия</i>
+                        <div class="single-column">
+                            <!--movie-list__item start-->
+                            <div class="movie-list__item">
+                                <a href="#">
+                                    <img src="dist/img/4.jpg" class="img-responsive js-tilt" alt="">
+                                </a>
+                                <div class="movie-list__item-desc">
+                                    <span class="branch-ref css-truncate css-truncate-target"
+                                          title="Команда мечты (2016)">Команда мечты (2016)</span>
+                                    <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Комедия</i>
+                                </div>
                             </div>
+                            <!--movie-list__item   end-->
                         </div>
-                        <!--movie-list__item   end-->
-                    </div>
-                    <div class="one-fifth column">
-                        <!--movie-list__item start-->
-                        <div class="movie-list__item">
-                            <a href="#">
-                                <img src="dist/img/5.jpg" class="img-responsive js-tilt" alt="">
-                            </a>
-                            <div class="movie-list__item-desc">
-                                <span class="branch-ref css-truncate css-truncate-target" title="Доктор Стрэндж (2016)">Доктор Стрэндж (2016)</span>
-                                <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Фэнтези,
-                                    Боевик, Приключения</i>
+                        <div class="single-column">
+                            <!--movie-list__item start-->
+                            <div class="movie-list__item">
+                                <a href="#">
+                                    <img src="dist/img/5.jpg" class="img-responsive js-tilt" alt="">
+                                </a>
+                                <div class="movie-list__item-desc">
+                                    <span class="branch-ref css-truncate css-truncate-target"
+                                          title="Доктор Стрэндж (2016)">Доктор Стрэндж (2016)</span>
+                                    <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Фэнтези,
+                                        Боевик, Приключения</i>
+                                </div>
                             </div>
+                            <!--movie-list__item   end-->
                         </div>
-                        <!--movie-list__item   end-->
+                        <div class="single-column">
+                            <!--movie-list__item start-->
+                            <div class="movie-list__item">
+                                <a href="#">
+                                    <img src="dist/img/1.jpg" class="img-responsive js-tilt" alt="">
+                                </a>
+                                <div class="movie-list__item-desc">
+                                <span class="branch-ref css-truncate css-truncate-target"
+                                      title="Обитель зла 6: Последняя глава (2017)">Обитель зла 6: Последняя глава (2017)</span>
+                                    <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Ужасы,
+                                        Фантастика, Боевик</i>
+                                </div>
+                            </div>
+                            <!--movie-list__item   end-->
+                        </div>
+                        <div class="single-column">
+                            <!--movie-list__item start-->
+                            <div class="movie-list__item">
+                                <a href="#">
+                                    <img src="dist/img/2.jpg" class="img-responsive js-tilt" alt="">
+                                </a>
+                                <div class="movie-list__item-desc">
+                                <span class="branch-ref css-truncate css-truncate-target"
+                                      title="Крест. Часть вторая: Двойной обман (2017)">Крест. Часть вторая: Двойной обман (2017)</span>
+                                    <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Боевик</i>
+                                </div>
+                            </div>
+                            <!--movie-list__item   end-->
+                        </div>
+                        <div class="single-column">
+                            <!--movie-list__item start-->
+                            <div class="movie-list__item">
+                                <a href="#">
+                                    <img src="dist/img/3.jpg" class="img-responsive js-tilt" alt="">
+                                </a>
+                                <div class="movie-list__item-desc">
+                                <span class="branch-ref css-truncate css-truncate-target"
+                                      title="На пятьдесят оттенков темнее (2017)">На пятьдесят оттенков темнее (2017)</span>
+                                    <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Мелодрама</i>
+                                </div>
+                            </div>
+                            <!--movie-list__item   end-->
+                        </div>
+                        <div class="single-column">
+                            <!--movie-list__item start-->
+                            <div class="movie-list__item">
+                                <a href="#">
+                                    <img src="dist/img/4.jpg" class="img-responsive js-tilt" alt="">
+                                </a>
+                                <div class="movie-list__item-desc">
+                                    <span class="branch-ref css-truncate css-truncate-target"
+                                          title="Команда мечты (2016)">Команда мечты (2016)</span>
+                                    <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Комедия</i>
+                                </div>
+                            </div>
+                            <!--movie-list__item   end-->
+                        </div>
+                        <div class="single-column">
+                            <!--movie-list__item start-->
+                            <div class="movie-list__item">
+                                <a href="#">
+                                    <img src="dist/img/5.jpg" class="img-responsive js-tilt" alt="">
+                                </a>
+                                <div class="movie-list__item-desc">
+                                    <span class="branch-ref css-truncate css-truncate-target"
+                                          title="Доктор Стрэндж (2016)">Доктор Стрэндж (2016)</span>
+                                    <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Фэнтези,
+                                        Боевик, Приключения</i>
+                                </div>
+                            </div>
+                            <!--movie-list__item   end-->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -256,6 +335,7 @@
 <script src="dist/js/video-player-plugins/videojs.hotkey.js"></script>
 <script src="dist/js/video-player-plugins/videojs.caption.js"></script>
 <script src="dist/js/video-player.js"></script>
+<script src="dist/js/owl.carousel.min.js"></script>
 <script src="dist/js/app.js"></script>
 </body>
 </html>
