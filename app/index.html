@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Bumbu.tv - main page</title>
     <link rel="stylesheet" href="dist/css/font-awesome.min.css">
+    <link rel="stylesheet" href="dist/css/owl.carousel.min.css">
     <link rel="stylesheet" href="dist/css/primer.css">
     <link rel="stylesheet" href="dist/css/app.min.css">
 </head>
@@ -54,7 +55,7 @@
         <!--movie-list-header start-->
         <div class="movie-list-header">
             <div class="container">
-                <div class="columns py-3">
+                <div class="columns pt-3">
                     <div class="single-column">
                         <header class="clearfix">
                             <div class="left">
@@ -64,8 +65,10 @@
                             <div class="right">
                                 <a href="#" class="btn btn-outline">All</a>
                                 <div class="btn-group">
-                                    <button class="btn" type="button"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
-                                    <button class="btn" type="button"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                                    <button class="btn" type="button" data-carousel="movies" data-direction="prev"><i class="fa fa-arrow-left"
+                                                                         aria-hidden="true"></i></button>
+                                    <button class="btn" type="button"data-carousel="movies" data-direction="next"><i class="fa fa-arrow-right"
+                                                                         aria-hidden="true"></i></button>
                                 </div>
                             </div>
                         </header>
@@ -79,75 +82,151 @@
         <div class="movie-list__items">
             <div class="container">
                 <div class="columns">
-                    <div class="one-fifth column">
-                        <!--movie-list__item start-->
-                        <div class="movie-list__item">
-                            <a href="#">
-                                <img src="dist/img/1.jpg" class="img-responsive js-tilt" alt="">
-                            </a>
-                            <div class="movie-list__item-desc">
+                    <div class="owl-carousel js-movie-carousel">
+                        <div class="single-column">
+                            <!--movie-list__item start-->
+                            <div class="movie-list__item">
+                                <a href="#">
+                                    <img src="dist/img/1.jpg" class="img-responsive js-tilt" alt="">
+                                </a>
+                                <div class="movie-list__item-desc">
                                 <span class="branch-ref css-truncate css-truncate-target"
                                       title="Обитель зла 6: Последняя глава (2017)">Обитель зла 6: Последняя глава (2017)</span>
-                                <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Ужасы,
-                                    Фантастика, Боевик</i>
+                                    <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Ужасы,
+                                        Фантастика, Боевик</i>
+                                </div>
                             </div>
+                            <!--movie-list__item   end-->
                         </div>
-                        <!--movie-list__item   end-->
-                    </div>
-                    <div class="one-fifth column">
-                        <!--movie-list__item start-->
-                        <div class="movie-list__item">
-                            <a href="#">
-                                <img src="dist/img/2.jpg" class="img-responsive js-tilt" alt="">
-                            </a>
-                            <div class="movie-list__item-desc">
+                        <div class="single-column">
+                            <!--movie-list__item start-->
+                            <div class="movie-list__item">
+                                <a href="#">
+                                    <img src="dist/img/2.jpg" class="img-responsive js-tilt" alt="">
+                                </a>
+                                <div class="movie-list__item-desc">
                                 <span class="branch-ref css-truncate css-truncate-target"
                                       title="Крест. Часть вторая: Двойной обман (2017)">Крест. Часть вторая: Двойной обман (2017)</span>
-                                <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Боевик</i>
+                                    <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Боевик</i>
+                                </div>
                             </div>
+                            <!--movie-list__item   end-->
                         </div>
-                        <!--movie-list__item   end-->
-                    </div>
-                    <div class="one-fifth column">
-                        <!--movie-list__item start-->
-                        <div class="movie-list__item">
-                            <a href="#">
-                                <img src="dist/img/3.jpg" class="img-responsive js-tilt" alt="">
-                            </a>
-                            <div class="movie-list__item-desc">
+                        <div class="single-column">
+                            <!--movie-list__item start-->
+                            <div class="movie-list__item">
+                                <a href="#">
+                                    <img src="dist/img/3.jpg" class="img-responsive js-tilt" alt="">
+                                </a>
+                                <div class="movie-list__item-desc">
                                 <span class="branch-ref css-truncate css-truncate-target"
                                       title="На пятьдесят оттенков темнее (2017)">На пятьдесят оттенков темнее (2017)</span>
-                                <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Мелодрама</i>
+                                    <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Мелодрама</i>
+                                </div>
                             </div>
+                            <!--movie-list__item   end-->
                         </div>
-                        <!--movie-list__item   end-->
-                    </div>
-                    <div class="one-fifth column">
-                        <!--movie-list__item start-->
-                        <div class="movie-list__item">
-                            <a href="#">
-                                <img src="dist/img/4.jpg" class="img-responsive js-tilt" alt="">
-                            </a>
-                            <div class="movie-list__item-desc">
-                                <span class="branch-ref css-truncate css-truncate-target" title="Команда мечты (2016)">Команда мечты (2016)</span>
-                                <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Комедия</i>
+                        <div class="single-column">
+                            <!--movie-list__item start-->
+                            <div class="movie-list__item">
+                                <a href="#">
+                                    <img src="dist/img/4.jpg" class="img-responsive js-tilt" alt="">
+                                </a>
+                                <div class="movie-list__item-desc">
+                                    <span class="branch-ref css-truncate css-truncate-target"
+                                          title="Команда мечты (2016)">Команда мечты (2016)</span>
+                                    <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Комедия</i>
+                                </div>
                             </div>
+                            <!--movie-list__item   end-->
                         </div>
-                        <!--movie-list__item   end-->
-                    </div>
-                    <div class="one-fifth column">
-                        <!--movie-list__item start-->
-                        <div class="movie-list__item">
-                            <a href="#">
-                                <img src="dist/img/5.jpg" class="img-responsive js-tilt" alt="">
-                            </a>
-                            <div class="movie-list__item-desc">
-                                <span class="branch-ref css-truncate css-truncate-target" title="Доктор Стрэндж (2016)">Доктор Стрэндж (2016)</span>
-                                <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Фэнтези,
-                                    Боевик, Приключения</i>
+                        <div class="single-column">
+                            <!--movie-list__item start-->
+                            <div class="movie-list__item">
+                                <a href="#">
+                                    <img src="dist/img/5.jpg" class="img-responsive js-tilt" alt="">
+                                </a>
+                                <div class="movie-list__item-desc">
+                                    <span class="branch-ref css-truncate css-truncate-target"
+                                          title="Доктор Стрэндж (2016)">Доктор Стрэндж (2016)</span>
+                                    <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Фэнтези,
+                                        Боевик, Приключения</i>
+                                </div>
                             </div>
+                            <!--movie-list__item   end-->
                         </div>
-                        <!--movie-list__item   end-->
+                        <div class="single-column">
+                            <!--movie-list__item start-->
+                            <div class="movie-list__item">
+                                <a href="#">
+                                    <img src="dist/img/1.jpg" class="img-responsive js-tilt" alt="">
+                                </a>
+                                <div class="movie-list__item-desc">
+                                <span class="branch-ref css-truncate css-truncate-target"
+                                      title="Обитель зла 6: Последняя глава (2017)">Обитель зла 6: Последняя глава (2017)</span>
+                                    <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Ужасы,
+                                        Фантастика, Боевик</i>
+                                </div>
+                            </div>
+                            <!--movie-list__item   end-->
+                        </div>
+                        <div class="single-column">
+                            <!--movie-list__item start-->
+                            <div class="movie-list__item">
+                                <a href="#">
+                                    <img src="dist/img/2.jpg" class="img-responsive js-tilt" alt="">
+                                </a>
+                                <div class="movie-list__item-desc">
+                                <span class="branch-ref css-truncate css-truncate-target"
+                                      title="Крест. Часть вторая: Двойной обман (2017)">Крест. Часть вторая: Двойной обман (2017)</span>
+                                    <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Боевик</i>
+                                </div>
+                            </div>
+                            <!--movie-list__item   end-->
+                        </div>
+                        <div class="single-column">
+                            <!--movie-list__item start-->
+                            <div class="movie-list__item">
+                                <a href="#">
+                                    <img src="dist/img/3.jpg" class="img-responsive js-tilt" alt="">
+                                </a>
+                                <div class="movie-list__item-desc">
+                                <span class="branch-ref css-truncate css-truncate-target"
+                                      title="На пятьдесят оттенков темнее (2017)">На пятьдесят оттенков темнее (2017)</span>
+                                    <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Мелодрама</i>
+                                </div>
+                            </div>
+                            <!--movie-list__item   end-->
+                        </div>
+                        <div class="single-column">
+                            <!--movie-list__item start-->
+                            <div class="movie-list__item">
+                                <a href="#">
+                                    <img src="dist/img/4.jpg" class="img-responsive js-tilt" alt="">
+                                </a>
+                                <div class="movie-list__item-desc">
+                                    <span class="branch-ref css-truncate css-truncate-target"
+                                          title="Команда мечты (2016)">Команда мечты (2016)</span>
+                                    <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Комедия</i>
+                                </div>
+                            </div>
+                            <!--movie-list__item   end-->
+                        </div>
+                        <div class="single-column">
+                            <!--movie-list__item start-->
+                            <div class="movie-list__item">
+                                <a href="#">
+                                    <img src="dist/img/5.jpg" class="img-responsive js-tilt" alt="">
+                                </a>
+                                <div class="movie-list__item-desc">
+                                    <span class="branch-ref css-truncate css-truncate-target"
+                                          title="Доктор Стрэндж (2016)">Доктор Стрэндж (2016)</span>
+                                    <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Фэнтези,
+                                        Боевик, Приключения</i>
+                                </div>
+                            </div>
+                            <!--movie-list__item   end-->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -161,7 +240,7 @@
         <!--movie-list-header start-->
         <div class="movie-list-header">
             <div class="container">
-                <div class="columns py-3">
+                <div class="columns pt-3">
                     <div class="single-column">
                         <header class="clearfix">
                             <div class="left">
@@ -171,8 +250,10 @@
                             <div class="right">
                                 <a href="#" class="btn btn-outline">All</a>
                                 <div class="btn-group">
-                                    <button class="btn" type="button"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
-                                    <button class="btn" type="button"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                                    <button class="btn" type="button" data-carousel="cartoons" data-direction="prev"><i class="fa fa-arrow-left"
+                                                                         aria-hidden="true"></i></button>
+                                    <button class="btn" type="button" data-carousel="cartoons" data-direction="next"><i class="fa fa-arrow-right"
+                                                                         aria-hidden="true"></i></button>
                                 </div>
                             </div>
                         </header>
@@ -186,77 +267,153 @@
         <div class="movie-list__items">
             <div class="container">
                 <div class="columns">
-                    <div class="one-fifth column">
-                        <!--movie-list__item start-->
-                        <div class="movie-list__item">
-                            <a href="#">
-                                <img src="dist/img/6.jpg" class="img-responsive js-tilt" alt="">
-                            </a>
-                            <div class="movie-list__item-desc">
-                                <span class="branch-ref css-truncate css-truncate-target" title="Моана (2016)">Моана (2016)</span>
-                                <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Мультфильм,
-                                    Детский, Семейный</i>
+                    <div class="owl-carousel js-cartoon-carousel">
+                        <div class="single-column">
+                            <!--movie-list__item start-->
+                            <div class="movie-list__item">
+                                <a href="#">
+                                    <img src="dist/img/6.jpg" class="img-responsive js-tilt" alt="">
+                                </a>
+                                <div class="movie-list__item-desc">
+                                    <span class="branch-ref css-truncate css-truncate-target" title="Моана (2016)">Моана (2016)</span>
+                                    <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Мультфильм,
+                                        Детский, Семейный</i>
+                                </div>
                             </div>
+                            <!--movie-list__item   end-->
                         </div>
-                        <!--movie-list__item   end-->
-                    </div>
-                    <div class="one-fifth column">
-                        <!--movie-list__item start-->
-                        <div class="movie-list__item">
-                            <a href="#">
-                                <img src="dist/img/11.jpg" class="img-responsive js-tilt" alt="">
-                            </a>
-                            <div class="movie-list__item-desc">
-                                <span class="branch-ref css-truncate css-truncate-target" title="В поисках Дори (2016)">В поисках Дори (2016)</span>
-                                <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Мультфильм,
-                                    Детский, Семейный</i>
+                        <div class="single-column">
+                            <!--movie-list__item start-->
+                            <div class="movie-list__item">
+                                <a href="#">
+                                    <img src="dist/img/11.jpg" class="img-responsive js-tilt" alt="">
+                                </a>
+                                <div class="movie-list__item-desc">
+                                    <span class="branch-ref css-truncate css-truncate-target"
+                                          title="В поисках Дори (2016)">В поисках Дори (2016)</span>
+                                    <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Мультфильм,
+                                        Детский, Семейный</i>
+                                </div>
                             </div>
+                            <!--movie-list__item   end-->
                         </div>
-                        <!--movie-list__item   end-->
-                    </div>
-                    <div class="one-fifth column">
-                        <!--movie-list__item start-->
-                        <div class="movie-list__item">
-                            <a href="#">
-                                <img src="dist/img/9.jpg" class="img-responsive js-tilt" alt="">
-                            </a>
-                            <div class="movie-list__item-desc">
+                        <div class="single-column">
+                            <!--movie-list__item start-->
+                            <div class="movie-list__item">
+                                <a href="#">
+                                    <img src="dist/img/9.jpg" class="img-responsive js-tilt" alt="">
+                                </a>
+                                <div class="movie-list__item-desc">
                                 <span class="branch-ref css-truncate css-truncate-target"
                                       title="Кубо. Легенда о самурае (2016)">Кубо. Легенда о самурае (2016)</span>
-                                <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Мультфильм,
-                                    Детский, Семейный</i>
+                                    <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Мультфильм,
+                                        Детский, Семейный</i>
+                                </div>
                             </div>
+                            <!--movie-list__item   end-->
                         </div>
-                        <!--movie-list__item   end-->
-                    </div>
-                    <div class="one-fifth column">
-                        <!--movie-list__item start-->
-                        <div class="movie-list__item">
-                            <a href="#">
-                                <img src="dist/img/10.jpg" class="img-responsive js-tilt" alt="">
-                            </a>
-                            <div class="movie-list__item-desc">
+                        <div class="single-column">
+                            <!--movie-list__item start-->
+                            <div class="movie-list__item">
+                                <a href="#">
+                                    <img src="dist/img/10.jpg" class="img-responsive js-tilt" alt="">
+                                </a>
+                                <div class="movie-list__item-desc">
                                 <span class="branch-ref css-truncate css-truncate-target"
                                       title="Тайная жизнь домашних животных (2016)">Тайная жизнь домашних животных (2016)</span>
-                                <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Мультфильм,
-                                    Детский</i>
+                                    <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Мультфильм,
+                                        Детский</i>
+                                </div>
                             </div>
+                            <!--movie-list__item   end-->
                         </div>
-                        <!--movie-list__item   end-->
-                    </div>
-                    <div class="one-fifth column">
-                        <!--movie-list__item start-->
-                        <div class="movie-list__item">
-                            <a href="#">
-                                <img src="dist/img/8.jpg" class="img-responsive js-tilt" alt="">
-                            </a>
-                            <div class="movie-list__item-desc">
-                                <span class="branch-ref css-truncate css-truncate-target" title="Тролли (2016)">Тролли (2016)</span>
-                                <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Мультфильм,
-                                    Семейный</i>
+                        <div class="single-column">
+                            <!--movie-list__item start-->
+                            <div class="movie-list__item">
+                                <a href="#">
+                                    <img src="dist/img/8.jpg" class="img-responsive js-tilt" alt="">
+                                </a>
+                                <div class="movie-list__item-desc">
+                                    <span class="branch-ref css-truncate css-truncate-target" title="Тролли (2016)">Тролли (2016)</span>
+                                    <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Мультфильм,
+                                        Семейный</i>
+                                </div>
                             </div>
+                            <!--movie-list__item   end-->
                         </div>
-                        <!--movie-list__item   end-->
+                        <div class="single-column">
+                            <!--movie-list__item start-->
+                            <div class="movie-list__item">
+                                <a href="#">
+                                    <img src="dist/img/6.jpg" class="img-responsive js-tilt" alt="">
+                                </a>
+                                <div class="movie-list__item-desc">
+                                    <span class="branch-ref css-truncate css-truncate-target" title="Моана (2016)">Моана (2016)</span>
+                                    <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Мультфильм,
+                                        Детский, Семейный</i>
+                                </div>
+                            </div>
+                            <!--movie-list__item   end-->
+                        </div>
+                        <div class="single-column">
+                            <!--movie-list__item start-->
+                            <div class="movie-list__item">
+                                <a href="#">
+                                    <img src="dist/img/11.jpg" class="img-responsive js-tilt" alt="">
+                                </a>
+                                <div class="movie-list__item-desc">
+                                    <span class="branch-ref css-truncate css-truncate-target"
+                                          title="В поисках Дори (2016)">В поисках Дори (2016)</span>
+                                    <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Мультфильм,
+                                        Детский, Семейный</i>
+                                </div>
+                            </div>
+                            <!--movie-list__item   end-->
+                        </div>
+                        <div class="single-column">
+                            <!--movie-list__item start-->
+                            <div class="movie-list__item">
+                                <a href="#">
+                                    <img src="dist/img/9.jpg" class="img-responsive js-tilt" alt="">
+                                </a>
+                                <div class="movie-list__item-desc">
+                                <span class="branch-ref css-truncate css-truncate-target"
+                                      title="Кубо. Легенда о самурае (2016)">Кубо. Легенда о самурае (2016)</span>
+                                    <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Мультфильм,
+                                        Детский, Семейный</i>
+                                </div>
+                            </div>
+                            <!--movie-list__item   end-->
+                        </div>
+                        <div class="single-column">
+                            <!--movie-list__item start-->
+                            <div class="movie-list__item">
+                                <a href="#">
+                                    <img src="dist/img/10.jpg" class="img-responsive js-tilt" alt="">
+                                </a>
+                                <div class="movie-list__item-desc">
+                                <span class="branch-ref css-truncate css-truncate-target"
+                                      title="Тайная жизнь домашних животных (2016)">Тайная жизнь домашних животных (2016)</span>
+                                    <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Мультфильм,
+                                        Детский</i>
+                                </div>
+                            </div>
+                            <!--movie-list__item   end-->
+                        </div>
+                        <div class="single-column">
+                            <!--movie-list__item start-->
+                            <div class="movie-list__item">
+                                <a href="#">
+                                    <img src="dist/img/8.jpg" class="img-responsive js-tilt" alt="">
+                                </a>
+                                <div class="movie-list__item-desc">
+                                    <span class="branch-ref css-truncate css-truncate-target" title="Тролли (2016)">Тролли (2016)</span>
+                                    <i class="branch-ref css-truncate css-truncate-target text-gray text-small">Мультфильм,
+                                        Семейный</i>
+                                </div>
+                            </div>
+                            <!--movie-list__item   end-->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -280,8 +437,10 @@
                             <div class="right">
                                 <a href="#" class="btn btn-outline">All</a>
                                 <div class="btn-group">
-                                    <button class="btn" type="button"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
-                                    <button class="btn" type="button"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                                    <button class="btn" type="button" data-carousel="series" data-direction="prev"><i class="fa fa-arrow-left"
+                                                                         aria-hidden="true"></i></button>
+                                    <button class="btn" type="button" data-carousel="series" data-direction="next"><i class="fa fa-arrow-right"
+                                                                         aria-hidden="true"></i></button>
                                 </div>
                             </div>
                         </header>
@@ -295,50 +454,97 @@
         <div class="series-list__items">
             <div class="container">
                 <div class="columns">
-                    <div class="one-third column">
-                        <!--series-list__item start-->
-                        <div class="series-list__item js-series-item"
-                             style="background: linear-gradient(to bottom, #4F5B67, #A0A9B0);">
-                            <a href="#">
-                                <span class="series-list__item-title">MR. Robot</span>
-                                <span class="series-list__item-genres">Action, History, Fantasy</span>
+                    <div class="owl-carousel js-series-carousel">
+                        <div class="single-column">
+                            <!--series-list__item start-->
+                            <div class="series-list__item js-series-item"
+                                 style="background: linear-gradient(to bottom, #4F5B67, #A0A9B0);">
+                                <a href="#">
+                                    <span class="series-list__item-title">MR. Robot</span>
+                                    <span class="series-list__item-genres">Action, History, Fantasy</span>
 
-                                <img class="series-list__item-poster-left" src="dist/img/1-left.jpg" alt="">
-                                <img class="series-list__item-poster-middle" src="dist/img/1-middle.jpg" alt="">
-                                <img class="series-list__item-poster-right" src="dist/img/1-right.jpg" alt="">
-                            </a>
+                                    <img class="series-list__item-poster-left" src="dist/img/1-left.jpg" alt="">
+                                    <img class="series-list__item-poster-middle" src="dist/img/1-middle.jpg" alt="">
+                                    <img class="series-list__item-poster-right" src="dist/img/1-right.jpg" alt="">
+                                </a>
+                            </div>
+                            <!--series-list__item   end-->
                         </div>
-                        <!--series-list__item   end-->
-                    </div>
-                    <div class="one-third column">
-                        <!--series-list__item start-->
-                        <div class="series-list__item js-series-item"
-                             style="background: linear-gradient(to bottom, #0F1010, #6F7373);">
-                            <a href="#">
-                                <span class="series-list__item-title">Game Of Thrones</span>
-                                <span class="series-list__item-genres">Action, History, Fantasy</span>
+                        <div class="single-column">
+                            <!--series-list__item start-->
+                            <div class="series-list__item js-series-item"
+                                 style="background: linear-gradient(to bottom, #0F1010, #6F7373);">
+                                <a href="#">
+                                    <span class="series-list__item-title">Game Of Thrones</span>
+                                    <span class="series-list__item-genres">Action, History, Fantasy</span>
 
-                                <img class="series-list__item-poster-left" src="dist/img/2-left.jpg" alt="">
-                                <img class="series-list__item-poster-middle" src="dist/img/2-middle.jpg" alt="">
-                                <img class="series-list__item-poster-right" src="dist/img/2-right.jpg" alt="">
-                            </a>
+                                    <img class="series-list__item-poster-left" src="dist/img/2-left.jpg" alt="">
+                                    <img class="series-list__item-poster-middle" src="dist/img/2-middle.jpg" alt="">
+                                    <img class="series-list__item-poster-right" src="dist/img/2-right.jpg" alt="">
+                                </a>
+                            </div>
+                            <!--series-list__item   end-->
                         </div>
-                        <!--series-list__item   end-->
-                    </div>
-                    <div class="one-third column">
-                        <!--series-list__item start-->
-                        <div class="series-list__item js-series-item"
-                             style="background: linear-gradient(to bottom, #938D6D, #E4DCD2);">
-                            <a href="#">
-                                <span class="series-list__item-title">Walking Dead</span>
-                                <span class="series-list__item-genres">Action, History, Fantasy</span>
+                        <div class="single-column">
+                            <!--series-list__item start-->
+                            <div class="series-list__item js-series-item"
+                                 style="background: linear-gradient(to bottom, #938D6D, #E4DCD2);">
+                                <a href="#">
+                                    <span class="series-list__item-title">Walking Dead</span>
+                                    <span class="series-list__item-genres">Action, History, Fantasy</span>
 
-                                <img class="series-list__item-poster-left" src="dist/img/3-left.jpg" alt="">
-                                <img class="series-list__item-poster-middle" src="dist/img/3-middle.jpg" alt="">
-                                <img class="series-list__item-poster-right" src="dist/img/3-right.jpg" alt="">
-                            </a>
+                                    <img class="series-list__item-poster-left" src="dist/img/3-left.jpg" alt="">
+                                    <img class="series-list__item-poster-middle" src="dist/img/3-middle.jpg" alt="">
+                                    <img class="series-list__item-poster-right" src="dist/img/3-right.jpg" alt="">
+                                </a>
+                            </div>
+                            <!--series-list__item   end-->
                         </div>
-                        <!--series-list__item   end-->
+                        <div class="single-column">
+                            <!--series-list__item start-->
+                            <div class="series-list__item js-series-item"
+                                 style="background: linear-gradient(to bottom, #4F5B67, #A0A9B0);">
+                                <a href="#">
+                                    <span class="series-list__item-title">MR. Robot</span>
+                                    <span class="series-list__item-genres">Action, History, Fantasy</span>
+
+                                    <img class="series-list__item-poster-left" src="dist/img/1-left.jpg" alt="">
+                                    <img class="series-list__item-poster-middle" src="dist/img/1-middle.jpg" alt="">
+                                    <img class="series-list__item-poster-right" src="dist/img/1-right.jpg" alt="">
+                                </a>
+                            </div>
+                            <!--series-list__item   end-->
+                        </div>
+                        <div class="single-column">
+                            <!--series-list__item start-->
+                            <div class="series-list__item js-series-item"
+                                 style="background: linear-gradient(to bottom, #0F1010, #6F7373);">
+                                <a href="#">
+                                    <span class="series-list__item-title">Game Of Thrones</span>
+                                    <span class="series-list__item-genres">Action, History, Fantasy</span>
+
+                                    <img class="series-list__item-poster-left" src="dist/img/2-left.jpg" alt="">
+                                    <img class="series-list__item-poster-middle" src="dist/img/2-middle.jpg" alt="">
+                                    <img class="series-list__item-poster-right" src="dist/img/2-right.jpg" alt="">
+                                </a>
+                            </div>
+                            <!--series-list__item   end-->
+                        </div>
+                        <div class="single-column">
+                            <!--series-list__item start-->
+                            <div class="series-list__item js-series-item"
+                                 style="background: linear-gradient(to bottom, #938D6D, #E4DCD2);">
+                                <a href="#">
+                                    <span class="series-list__item-title">Walking Dead</span>
+                                    <span class="series-list__item-genres">Action, History, Fantasy</span>
+
+                                    <img class="series-list__item-poster-left" src="dist/img/3-left.jpg" alt="">
+                                    <img class="series-list__item-poster-middle" src="dist/img/3-middle.jpg" alt="">
+                                    <img class="series-list__item-poster-right" src="dist/img/3-right.jpg" alt="">
+                                </a>
+                            </div>
+                            <!--series-list__item   end-->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -362,8 +568,10 @@
                             <div class="right">
                                 <a href="#" class="btn btn-outline">All</a>
                                 <div class="btn-group">
-                                    <button class="btn" type="button"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
-                                    <button class="btn" type="button"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                                    <button class="btn" type="button" data-carousel="ted" data-direction="prev"><i class="fa fa-arrow-left"
+                                                                         aria-hidden="true"></i></button>
+                                    <button class="btn" type="button" data-carousel="ted" data-direction="next"><i class="fa fa-arrow-right"
+                                                                         aria-hidden="true"></i></button>
                                 </div>
                             </div>
                         </header>
@@ -393,44 +601,85 @@
 
                     <div class="three-fourths column">
                         <div class="columns">
-                            <div class="one-third column">
-                                <!--ted-list__item start-->
-                                <div class="ted-list__item">
-                                    <a href="#">
-                                        <img src="dist/img/ted-1.jpg" class="img-responsive" alt="">
-                                        <div class="ted-list__item-desc">
-                                            <span>What time is it on Mars?</span>
-                                        </div>
-                                        <i>9:15</i>
-                                    </a>
+                            <div class="owl-carousel js-ted-carousel">
+                                <div class="single-column">
+                                    <!--ted-list__item start-->
+                                    <div class="ted-list__item">
+                                        <a href="#">
+                                            <img src="dist/img/ted-1.jpg" class="img-responsive" alt="">
+                                            <div class="ted-list__item-desc">
+                                                <span>What time is it on Mars?</span>
+                                            </div>
+                                            <i>9:15</i>
+                                        </a>
+                                    </div>
+                                    <!--ted-list__item   end-->
                                 </div>
-                                <!--ted-list__item   end-->
-                            </div>
-                            <div class="one-third column">
-                                <!--ted-list__item start-->
-                                <div class="ted-list__item">
-                                    <a href="#">
-                                        <img src="dist/img/ted-2.jpg" class="img-responsive" alt="">
-                                        <div class="ted-list__item-desc">
-                                            <span>The good news of the decade? We're winning the war against child mortality</span>
-                                        </div>
-                                        <i>14:05</i>
-                                    </a>
+                                <div class="single-column">
+                                    <!--ted-list__item start-->
+                                    <div class="ted-list__item">
+                                        <a href="#">
+                                            <img src="dist/img/ted-2.jpg" class="img-responsive" alt="">
+                                            <div class="ted-list__item-desc">
+                                                <span>The good news of the decade? We're winning the war against child mortality</span>
+                                            </div>
+                                            <i>14:05</i>
+                                        </a>
+                                    </div>
+                                    <!--ted-list__item end-->
                                 </div>
-                                <!--ted-list__item end-->
-                            </div>
-                            <div class="one-third column">
-                                <!--ted-list__item start-->
-                                <div class="ted-list__item">
-                                    <a href="#">
-                                        <img src="dist/img/ted-3.jpg" class="img-responsive" alt="">
-                                        <div class="ted-list__item-desc">
-                                            <span>Playlist: Statistically speaking ... a man who loved the world</span>
-                                        </div>
-                                        <i>8:50</i>
-                                    </a>
+                                <div class="single-column">
+                                    <!--ted-list__item start-->
+                                    <div class="ted-list__item">
+                                        <a href="#">
+                                            <img src="dist/img/ted-3.jpg" class="img-responsive" alt="">
+                                            <div class="ted-list__item-desc">
+                                                <span>Playlist: Statistically speaking ... a man who loved the world</span>
+                                            </div>
+                                            <i>8:50</i>
+                                        </a>
+                                    </div>
+                                    <!--ted-list__item   end-->
                                 </div>
-                                <!--ted-list__item   end-->
+                                <div class="single-column">
+                                    <!--ted-list__item start-->
+                                    <div class="ted-list__item">
+                                        <a href="#">
+                                            <img src="dist/img/ted-1.jpg" class="img-responsive" alt="">
+                                            <div class="ted-list__item-desc">
+                                                <span>What time is it on Mars?</span>
+                                            </div>
+                                            <i>9:15</i>
+                                        </a>
+                                    </div>
+                                    <!--ted-list__item   end-->
+                                </div>
+                                <div class="single-column">
+                                    <!--ted-list__item start-->
+                                    <div class="ted-list__item">
+                                        <a href="#">
+                                            <img src="dist/img/ted-2.jpg" class="img-responsive" alt="">
+                                            <div class="ted-list__item-desc">
+                                                <span>The good news of the decade? We're winning the war against child mortality</span>
+                                            </div>
+                                            <i>14:05</i>
+                                        </a>
+                                    </div>
+                                    <!--ted-list__item end-->
+                                </div>
+                                <div class="single-column">
+                                    <!--ted-list__item start-->
+                                    <div class="ted-list__item">
+                                        <a href="#">
+                                            <img src="dist/img/ted-3.jpg" class="img-responsive" alt="">
+                                            <div class="ted-list__item-desc">
+                                                <span>Playlist: Statistically speaking ... a man who loved the world</span>
+                                            </div>
+                                            <i>8:50</i>
+                                        </a>
+                                    </div>
+                                    <!--ted-list__item   end-->
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -464,6 +713,7 @@
 
 <script src="dist/js/jquery-3.1.1.min.js"></script>
 <script src="dist/js/tilt.jquery.min.js"></script>
+<script src="dist/js/owl.carousel.min.js"></script>
 <script src="dist/js/app.js"></script>
 </body>
 </html>

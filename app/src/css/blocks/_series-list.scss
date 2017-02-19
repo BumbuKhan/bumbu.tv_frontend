@@ -1,3 +1,7 @@
+.series-list__items .owl-carousel .owl-item img {
+  width: auto;
+}
+
 .series-list__item {
   position: relative;
   overflow: hidden;
@@ -37,7 +41,7 @@
   position: absolute;
   top: 120px;
   z-index: 2;
-  width: 120px;
+  width: 120px !important;
   @include border-radius($poster-border-radius);
   outline: 1px solid transparent;
 }
@@ -48,7 +52,7 @@
 
 .series-list__item .series-list__item-poster-middle {
   z-index: 3;
-  width: 160px;
+  width: 160px !important;
   left: 76px;
   top: 80px;
   @include box-shadow($series-poster-box-shadow);
