@@ -62,7 +62,7 @@
         return text;
     }
 
-    // register the caption plugin (dependent on jq uery)
+    // register the caption plugin (dependent on jquery)
     function registerCaptionPlugin(options) {
 
         var noCaption, cursorID;
@@ -114,6 +114,7 @@
             // special case: if playback is missing caption or past the last caption
             if (noCaption) {
                 cursorID = searchCaption(currentTime);
+
                 if(noCaption){
                     hideCaption();
                     return;
@@ -128,7 +129,7 @@
             } else {
                 if (currentTime > cursor.endTime && (currentTime - cursor.endTime) < 500) {
                     // case 2: video plays continously and move to the next (when change is less than 500ms)
-                    cursorID++;
+                    //cursorID++;
 
                     // check if we reached the end of the caption
                     if (cursorID > captions.length - 1){
@@ -165,10 +166,12 @@
                     noCaption = false;
                     // the tricky thing is there could be multiple captions starting at the same time
                     // so return the cursor index of the first caption
-                    while (currentIndex > 0 && isWithinCursor(currentTime, captions[currentIndex - 1]) == 0) {
+                    /*while (currentIndex > 0 && isWithinCursor(currentTime, captions[currentIndex - 1]) == 0) {
                         currentIndex--;
-                    }
+                    }*/
+                    window.currentIndex = currentIndex;
                     return currentIndex;
+                    //break;
                 }
             }
             // error handling: can't find the caption
@@ -219,6 +222,7 @@
 
         //POP-on style: update the caption text along with the postion/alignment style
         function updatePopOnCaptionText() {
+
             var numNewDisplayCaption = 1;
             //if there are more than one caption at the same time, iterate to the last caption
             while (true) {
@@ -288,9 +292,8 @@
         player.caption = {
             updateCaption: function(callback) {
                 cursorID = searchCaption(ct);
-                updateCaptionText();
+                //updateCaptionText();
                 if(callback) callback();
-
             },
             loadNewCaption: function() {
                 player.pause().currentTime(0);

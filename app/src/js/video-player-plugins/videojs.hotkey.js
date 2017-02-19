@@ -6,7 +6,7 @@
  * Licensed under the Apache-2.0 license.
  */
 
-;(function(root, factory) {
+;(function (root, factory) {
     if (typeof define === 'function' && define.amd) {
         define([], factory.bind(this, root, root.videojs));
     } else if (typeof module !== 'undefined' && module.exports) {
@@ -15,17 +15,18 @@
         factory(root, root.videojs);
     }
 
-})(window, function(window, videojs) {
+})(window, function (window, videojs) {
     "use strict";
-    window['videojs_hotkeys'] = { version: "0.2.17" };
+    window['videojs_hotkeys'] = {version: "0.2.17"};
 
-    var hotkeys = function(options) {
+    var hotkeys = function (options) {
         var player = this;
         var pEl = player.el();
         var doc = document;
         var def_options = {
             volumeStep: 0.1,
-            seekStep: 5,
+            seekStep: 10,
+            seekStepByCue: true,
             enableMute: true,
             enableVolumeScroll: true,
             enableFullscreen: true,
@@ -58,6 +59,7 @@
 
         var volumeStep = options.volumeStep,
             seekStep = options.seekStep,
+            seekStepByCue = options.seekStepByCue,
             enableMute = options.enableMute,
             enableVolumeScroll = options.enableVolumeScroll,
             enableFull = options.enableFullscreen,
@@ -76,18 +78,18 @@
         pEl.style.outline = "none";
 
         if (alwaysCaptureHotkeys || !player.autoplay()) {
-            player.one('play', function() {
+            player.one('play', function () {
                 pEl.focus(); // Fixes the .vjs-big-play-button handing focus back to body instead of the player
             });
         }
 
         if (enableInactiveFocus) {
-            player.on('userinactive', function() {
+            player.on('userinactive', function () {
                 // When the control bar fades, re-apply focus to the player if last focus was a control button
-                var cancelFocusingPlayer = function() {
+                var cancelFocusingPlayer = function () {
                     clearTimeout(focusingPlayerTimeout);
                 };
-                var focusingPlayerTimeout = setTimeout(function() {
+                var focusingPlayerTimeout = setTimeout(function () {
                     player.off('useractive', cancelFocusingPlayer);
                     if (doc.activeElement.parentElement == pEl.querySelector('.vjs-control-bar')) {
                         pEl.focus();
@@ -98,7 +100,7 @@
             });
         }
 
-        player.on('play', function() {
+        player.on('play', function () {
             // Fix allowing the YouTube plugin to have hotkey support.
             var ifblocker = pEl.querySelector('.iframeblocker');
             if (ifblocker && ifblocker.style.display === '') {
@@ -142,17 +144,32 @@
                         // Seeking with the left/right arrow keys
                         case cRewind: // Seek Backward
                             ePreventDefault();
-                            curTime = player.currentTime() - seekStep;
-                            // The flash player tech will allow you to seek into negative
-                            // numbers and break the seekbar, so try to prevent that.
-                            if (player.currentTime() <= seekStep) {
-                                curTime = 0;
+
+                            if (seekStepByCue === true && window.prevCueTime) {
+                                curTime = window.prevCueTime;
+                            } else {
+                                curTime = player.currentTime() - seekStep;
+                                // The flash player tech will allow you to seek into negative
+                                // numbers and break the seekbar, so try to prevent that.
+                                if (player.currentTime() <= seekStep) {
+                                    curTime = 0;
+                                }
                             }
+
                             player.currentTime(curTime);
                             break;
                         case cForward: // Seek Forward
                             ePreventDefault();
-                            player.currentTime(player.currentTime() + seekStep);
+
+                            console.log('seekStepByCue', seekStepByCue);
+
+                            if (seekStepByCue === true && window.nextCueTime) {
+                                player.currentTime(window.nextCueTime);
+                            } else {
+                                console.log('** seekStep', seekStep);
+                                player.currentTime(player.currentTime() + seekStep);
+                            }
+
                             break;
 
                         // Volume control with the up/down arrow keys
@@ -251,29 +268,29 @@
         };
 
         /*var mouseScroll = function mouseScroll(event) {
-            // When controls are disabled, hotkeys will be disabled as well
-            if (player.controls()) {
-                var activeEl = event.relatedTarget || event.toElement || doc.activeElement;
-                if (alwaysCaptureHotkeys ||
-                    activeEl == pEl ||
-                    activeEl == pEl.querySelector('.vjs-tech') ||
-                    activeEl == pEl.querySelector('.iframeblocker') ||
-                    activeEl == pEl.querySelector('.vjs-control-bar')) {
+         // When controls are disabled, hotkeys will be disabled as well
+         if (player.controls()) {
+         var activeEl = event.relatedTarget || event.toElement || doc.activeElement;
+         if (alwaysCaptureHotkeys ||
+         activeEl == pEl ||
+         activeEl == pEl.querySelector('.vjs-tech') ||
+         activeEl == pEl.querySelector('.iframeblocker') ||
+         activeEl == pEl.querySelector('.vjs-control-bar')) {
 
-                    if (enableVolumeScroll) {
-                        event = window.event || event;
-                        var delta = Math.max(-1, Math.min(1, (event.wheelDelta || -event.detail)));
-                        event.preventDefault();
+         if (enableVolumeScroll) {
+         event = window.event || event;
+         var delta = Math.max(-1, Math.min(1, (event.wheelDelta || -event.detail)));
+         event.preventDefault();
 
-                        if (delta == 1) {
-                            player.volume(player.volume() + volumeStep);
-                        } else if (delta == -1) {
-                            player.volume(player.volume() - volumeStep);
-                        }
-                    }
-                }
-            }
-        };*/
+         if (delta == 1) {
+         player.volume(player.volume() + volumeStep);
+         } else if (delta == -1) {
+         player.volume(player.volume() - volumeStep);
+         }
+         }
+         }
+         }
+         };*/
 
         var checkKeys = function checkKeys(e, player) {
             // Allow some modularity in defining custom hotkeys

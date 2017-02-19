@@ -134,60 +134,48 @@ $(document).ready(function () {
      //console.log(tracks);
      */
 
-    var captionJson = [
+    window.captionJson = [
         {
-            "data": "As you can see,",
+            "data": "0. This is a roll up example.",
             "startTime": 1000,
-            "endTime": 2000
+            "endTime": 4000
         },
         {
-            "data": "the caption is being pushed up.<br />Lorem ipsm dolor",
-            "startTime": 2000,
-            "endTime": 3000
-        },
-        {
-            "data": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-            "startTime": 3000,
-            "endTime": 6000
-        },
-        {
-            "data": "Ab adipisci animi cupiditate deserunt fugit,  ",
+            "data": "1. As you can see,",
             "startTime": 6000,
-            "endTime": 10000
+            "endTime": 7000
         },
         {
-            "data": "molestias repudiandae sapiente ullam? Aspernatur aut in iure labore quisquam..",
+            "data": "2. the caption is being pushed up.",
             "startTime": 10000,
-            "endTime": 15000
+            "endTime": 14000
         },
         {
-            "data": "Aliquam aliquid consequuntur dolorum magnam qui?.",
-            "startTime": 15000,
-            "endTime": 20000
+            "data": "3. the caption is being pushed up.",
+            "startTime": 16000,
+            "endTime": 19000
         },
         {
-            "data": "A alias aliquid delectus et, facere illo labore molestias neque omnis qui sed, vitae?.",
+            "data": "4. the caption is being pushed up.",
             "startTime": 20000,
-            "endTime": 27000
+            "endTime": 26000
         },
         {
-            "data": "Architecto asperiores aut eius esse excepturi harum ipsa iste maiores mollitia.",
-            "startTime": 27000,
-            "endTime": 32000
+            "data": "5. the caption is being pushed up.",
+            "startTime": 30000,
+            "endTime": 33000
         },
         {
-            "data": "provident, sequi similique unde voluptate?.",
-            "startTime": 32000,
-            "endTime": 38000
-        },
-        {
-            "data": "Architecto asperiores aut eius esse excepturi harum ipsa iste maiores mollitia.",
-            "startTime": 40000,
-            "endTime": 48000
+            "data": "6. the caption is being pushed up.",
+            "startTime": 36000,
+            "endTime": 40000
         }
     ];
 
     window.isPlayerStoppedByUser = false;
+    window.prevCueTime = 0;
+    window.nextCueTime = captionJson[0]['startTime'] / 1000;
+    var captionLength = captionJson.length;
 
     var bumbuPlayer = videojs('bumbu-player', {
         html5: {
@@ -202,7 +190,7 @@ $(document).ready(function () {
         "controls": true,
         "preload": "auto"
     }, function () {
-        console.log('Player is initialized and ready.');
+        // console.log('Player is initialized and ready.');
         var thisPlayer = this;
 
         this.hotkeys({
@@ -215,14 +203,14 @@ $(document).ready(function () {
         this.on("click", function (e) {
             event.preventDefault();
             if (e.target.tagName == 'VIDEO') {
-                console.log('clicked on video');
+                // console.log('clicked on video');
                 window.isPlayerStoppedByUser = thisPlayer.paused();
             }
         });
     });
 
     bumbuPlayer.caption({
-        data: captionJson,
+        data: window.captionJson,
         setting: {
             captionType: 'pop-on',
             captionSize: 2,
@@ -232,8 +220,28 @@ $(document).ready(function () {
                 'padding': '10px 20px'
             },
             onCaptionChange: function (id) {
-                console.log('caption changed, id: ', id);
-            },
+                var curIndex = window.currentIndex;
+
+                var nextCue = captionJson[curIndex + 1];
+                var prevCue = captionJson[curIndex - 1];
+
+                if (curIndex == captionLength - 1) {
+                    window.nextCueTime = null;
+                    window.prevCueTime = null;
+                } else {
+                    if (nextCue) {
+                        window.nextCueTime = nextCue['startTime'] / 1000;
+                    } else {
+                        window.nextCueTime = null;
+                    }
+
+                    if (prevCue) {
+                        window.prevCueTime = prevCue['startTime'] / 1000;
+                    } else {
+                        window.prevCueTime = null;
+                    }
+                }
+            }
         }
     });
 
