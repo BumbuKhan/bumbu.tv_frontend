@@ -1,16 +1,19 @@
 .vjs-control-bar {
     z-index: 11;
 }
+
 .position-HB {
     width: 100%;
     height: auto;
     bottom: 12%;
 }
+
 .position-HT {
     width: 100%;
     height: auto;
     top: 12%;
 }
+
 .position-VR {
     -webkit-writing-mode: vertical-rl;
     -moz-writing-mode: vertical-rl;
@@ -22,6 +25,7 @@
     height: 100%;
     top: 0;
 }
+
 .position-VL {
     -webkit-writing-mode: vertical-rl;
     -moz-writing-mode: vertical-rl;
@@ -33,54 +37,74 @@
     height: 100%;
     top: 0;
 }
+
 .group-tags {
     writing-mode: horizontal-tb;
     -webkit-writing-mode: horizontal-tb;
 }
+
 .align-C {
     text-align: center;
 }
+
 .align-L {
     text-align: left;
 }
+
 .caption-font-size-0 {
     font-size: 1em;
 }
+
 .caption-font-size-1 {
     font-size: 1.3em;
 }
+
 .caption-font-size-2 {
     font-size: 1.7em;
 }
+
 .caption-font-size-3 {
     font-size: 2em;
 }
+
 .caption-font-size-4 {
     font-size: 2.3em;
 }
+
 .caption-font-size-5 {
     font-size: 2.7em;
 }
+
 .caption-font-size-6 {
     font-size: 3em;
 }
+
 .caption-font-size-7 {
     font-size: 3.3em;
 }
+
 .caption-font-size-8 {
     font-size: 3.6em;
 }
+
 .vjs-caption-overlay {
     position: absolute;
     z-index: 10;
     display: block;
+    background: rgba(0, 0, 0, .5);
 }
+
 .vjs-caption-overlay .vjs-caption-overlay-text {
     display: table;
     position: relative;
     margin: auto;
     padding: 3px;
+    -webkit-user-select: auto;
+    -moz-user-select: auto;
+    -ms-user-select: auto;
+    user-select: auto;
 }
+
 .vjs-caption-overlay .vjs-caption-overlay-text span {
     display: block;
 }

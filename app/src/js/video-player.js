@@ -136,21 +136,58 @@ $(document).ready(function () {
 
     var captionJson = [
         {
-            "data": "This is a roll up example.",
-            "startTime": 0,
-            "endTime": 1000
-        },
-        {
             "data": "As you can see,",
             "startTime": 1000,
             "endTime": 2000
         },
         {
-            "data": "the caption is being pushed up.",
+            "data": "the caption is being pushed up.<br />Lorem ipsm dolor",
             "startTime": 2000,
             "endTime": 3000
+        },
+        {
+            "data": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+            "startTime": 3000,
+            "endTime": 6000
+        },
+        {
+            "data": "Ab adipisci animi cupiditate deserunt fugit,  ",
+            "startTime": 6000,
+            "endTime": 10000
+        },
+        {
+            "data": "molestias repudiandae sapiente ullam? Aspernatur aut in iure labore quisquam..",
+            "startTime": 10000,
+            "endTime": 15000
+        },
+        {
+            "data": "Aliquam aliquid consequuntur dolorum magnam qui?.",
+            "startTime": 15000,
+            "endTime": 20000
+        },
+        {
+            "data": "A alias aliquid delectus et, facere illo labore molestias neque omnis qui sed, vitae?.",
+            "startTime": 20000,
+            "endTime": 27000
+        },
+        {
+            "data": "Architecto asperiores aut eius esse excepturi harum ipsa iste maiores mollitia.",
+            "startTime": 27000,
+            "endTime": 32000
+        },
+        {
+            "data": "provident, sequi similique unde voluptate?.",
+            "startTime": 32000,
+            "endTime": 38000
+        },
+        {
+            "data": "Architecto asperiores aut eius esse excepturi harum ipsa iste maiores mollitia.",
+            "startTime": 40000,
+            "endTime": 48000
         }
     ];
+
+    window.isPlayerStoppedByUser = false;
 
     var bumbuPlayer = videojs('bumbu-player', {
         html5: {
@@ -166,18 +203,45 @@ $(document).ready(function () {
         "preload": "auto"
     }, function () {
         console.log('Player is initialized and ready.');
+        var thisPlayer = this;
 
         this.hotkeys({
             volumeStep: 0.1,
             seekStep: 5,
             enableModifiersForNumbers: false
         });
+
+        this.off('click');
+        this.on("click", function (e) {
+            event.preventDefault();
+            if (e.target.tagName == 'VIDEO') {
+                console.log('clicked on video');
+                window.isPlayerStoppedByUser = thisPlayer.paused();
+            }
+        });
     });
 
     bumbuPlayer.caption({
         data: captionJson,
         setting: {
-            captionType: 'roll-up'
+            captionType: 'pop-on',
+            captionSize: 2,
+            captionStyle: {
+                'background-color': 'rgba(0, 0, 0, 0)',
+                'color': 'yellow',
+                'padding': '10px 20px'
+            },
+            onCaptionChange: function (id) {
+                console.log('caption changed, id: ', id);
+            },
+        }
+    });
+
+    $('.vjs-caption-overlay-text').hover(function () {
+        bumbuPlayer.pause();
+    }, function () {
+        if (!window.isPlayerStoppedByUser) {
+            bumbuPlayer.play();
         }
     });
 });

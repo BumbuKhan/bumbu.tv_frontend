@@ -132,8 +132,10 @@
 
                             if (player.paused()) {
                                 player.play();
+                                window.isPlayerStoppedByUser = false;
                             } else {
                                 player.pause();
+                                window.isPlayerStoppedByUser = true;
                             }
                             break;
 
