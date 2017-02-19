@@ -75,10 +75,10 @@ gulp.task('css:watch', function () {
 });
 
 // move font
-gulp.task('move_font', function () {
-    return gulp.src('./app/src/font/*')
-        .pipe(gulp.dest('./app/dist/font/'))
+gulp.task('move_fonts', function () {
+    return gulp.src('./app/src/fonts/*')
+        .pipe(gulp.dest('./app/dist/fonts/'))
 });
 
 // chainig default task
-gulp.task('default', gulpSequence('clean', 'sass', 'sass:watch', 'css:watch', 'move_img', 'move_js', 'js:watch', 'move_css', 'move_font', 'serve'));
+gulp.task('default', gulpSequence('clean', 'sass', 'sass:watch', 'css:watch', 'move_img', 'move_js', 'js:watch', 'move_css', 'move_fonts', 'serve'));

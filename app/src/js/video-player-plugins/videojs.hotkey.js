@@ -161,12 +161,12 @@
                         case cForward: // Seek Forward
                             ePreventDefault();
 
-                            console.log('seekStepByCue', seekStepByCue);
+                            // console.log('seekStepByCue', seekStepByCue);
 
                             if (seekStepByCue === true && window.nextCueTime) {
                                 player.currentTime(window.nextCueTime);
                             } else {
-                                console.log('** seekStep', seekStep);
+                                // console.log('** seekStep', seekStep);
                                 player.currentTime(player.currentTime() + seekStep);
                             }
 

@@ -1,0 +1,46 @@
+@import "../variables";
+
+.header__logo a {
+  text-decoration: none;
+}
+
+.header_search {
+  position: relative;
+}
+
+.header_search input {
+  padding-left: 32px;
+}
+
+.header_search i {
+  display: inline-block;
+  position: absolute;
+  font-size: 16px;
+  left: 10px;
+  top: 8px;
+}
+
+// dark theme
+.header_theme_dark {
+  background-color: $header-dark-theme-bg-color;
+}
+
+.header_theme_dark .header__logo a {
+  color: #e0e0e0;
+}
+
+.header_theme_dark .header_search .form-control {
+  background-color: $header-dark-theme-searchbox-bg-color;
+  border-color: $header-dark-theme-bg-color;
+  color: #e0e0e0;
+}
+
+.header_theme_dark .header_search i {
+  color: #666666;
+}
+
+.header_theme_dark .header_search .form-control:focus {
+  outline: none;
+  box-shadow: none;
+  background-color: $header-dark-theme-searchbox-bg-color-on-focus;
+}
