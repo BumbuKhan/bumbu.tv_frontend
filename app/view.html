@@ -13,6 +13,17 @@
 </head>
 <body>
 
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-92468913-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
 <div id="wrapper">
     <!--header start-->
     <header class="header header_theme_dark border-bottom">
@@ -21,7 +32,7 @@
                 <!--header__logo start-->
                 <div class="one-fifth column">
                     <div class="header__logo pt-2">
-                        <a href="#"><b>BUMBU.TV</b> <sup>&beta;</sup></a>
+                        <a href="http://bumbu.tv"><b>BUMBU.TV</b> <sup>&beta;</sup></a>
                     </div>
                 </div>
                 <!--header__logo   end-->
@@ -62,7 +73,7 @@
                     <div class="movie-view__description clearfix" style="background-image: url('dist/img/1-blur.jpg')">
                         <div class="movie-view__description-poster">
                             <img src="dist/img/1.jpg" class="img-responsive" alt="">
-                            <button class="btn btn-block btn-plain">Watch</button>
+                            <button class="btn btn-block btn-primary js-play-btn">Watch</button>
                         </div>
                         <div class="movie-view__description-info">
                             <table>
@@ -100,7 +111,7 @@
 
     <!--video-player start-->
     <div class="video-player">
-        <div class="container">
+        <div class="container" id="watch">
             <div class="columns">
                 <div class="single-column">
 
@@ -131,7 +142,7 @@
                     <div class="single-column">
                         <header class="clearfix">
                             <div class="left">
-                                <h3 class="text-gray-dark">Movies</h3>
+                                <h3 class="text-gray-dark">Keep watching</h3>
                                 <span class="text-gray">Lorem ipsum dolor sit amet</span>
                             </div>
                             <div class="right">
@@ -158,7 +169,7 @@
                         <div class="single-column">
                             <!--movie-list__item start-->
                             <div class="movie-list__item">
-                                <a href="#">
+                                <a href="http://bumbu.tv/view.html">
                                     <img src="dist/img/1.jpg" class="img-responsive js-tilt" alt="">
                                 </a>
                                 <div class="movie-list__item-desc">

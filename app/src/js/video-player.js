@@ -252,4 +252,10 @@ $(document).ready(function () {
             bumbuPlayer.play();
         }
     });
+
+    // handlef for 'Watch' button on movie view page
+    $('.js-play-btn').on('click', function () {
+        window.location.hash = 'watch';
+        bumbuPlayer.play();
+    })
 });
