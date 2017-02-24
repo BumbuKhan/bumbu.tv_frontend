@@ -1,6 +1,6 @@
 .movie-view__description {
   position: relative;
-  height: 400px;
+  height: $movie-view-description-height;
   @include border-radius($view-movie-block-border-radius);
   background-repeat: no-repeat;
   background-size: cover;
@@ -63,14 +63,10 @@
   }
 }
 
-.movie-view__description-text {
-  margin-bottom: 0;
-}
-
 .movie-view__description-transparent-bg {
   position: absolute;
   width: 100%;
-  height: 400px;
+  height: $movie-view-description-height;
   top: 0;
   left: 0;
   background: rgba(10, 10, 10, .5);
