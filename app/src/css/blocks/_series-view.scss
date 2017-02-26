@@ -73,6 +73,25 @@
   height: $series-details-height;
   overflow-y: hidden;
   background-color: rgba(0, 0, 0, .4);
+
+  &.scrollable.default-skin{
+    padding-bottom: 0;
+    padding-right: 0;
+  }
+
+  &.scrollable .viewport .overview{
+    width: 100%;
+  }
+
+  .scroll-bar.vertical{
+    z-index: 10 !important;
+    right: 2px !important;
+  }
+}
+
+.series-details__episodes{
+  max-width: 283px;
+  background-color: rgba(0, 0, 0, .6);
 }
 
 .series-details__seasons-list li a {
@@ -93,36 +112,36 @@
 .series-details__episodes-list li{
   background-repeat: no-repeat;
   background-size: cover;
-}
 
-.series-details__episodes-list li a {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  border-left: 3px #000 solid;
-  height: 100px;
-  background: url("../img/episode-transparent-bg.png") no-repeat top left;
+  a {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-left: 3px #000 solid;
+    height: 100px;
+    background: url("../img/episode-transparent-bg.png") no-repeat top left;
 
-  &:hover {
-    color: #fff;
-  }
+    &:hover {
+      color: #fff;
+    }
 
-  &.active {
-    border-left-color: #fff;
-    color: #fff;
-  }
+    &.active {
+      border-left-color: #fff;
+      color: #fff;
+    }
 
-  span {
-    display: block;
-  }
+    span {
+      display: block;
+    }
 
-  .series-details__episode-duration {
-    font-size: 11px;
-    margin-bottom: 15px;
-  }
+    .series-details__episode-duration {
+      font-size: 11px;
+      margin-bottom: 15px;
+    }
 
-  .series-details__episode-descrition {
-    font-size: 13px;
-    margin-top: 3px;
-    width: 70%;
+    .series-details__episode-descrition {
+      font-size: 13px;
+      margin-top: 3px;
+      width: 70%;
+    }
   }
 }
