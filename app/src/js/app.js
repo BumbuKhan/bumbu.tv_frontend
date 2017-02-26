@@ -29,5 +29,7 @@ $(document).ready(function () {
         var direction = $(this).attr('data-direction');
 
         carousels[relCarousel].trigger(direction + '.owl.carousel');
-    })
+    });
+
+    $('.series-details__episodes, .series-details__seasons').customScrollbar();
 });
