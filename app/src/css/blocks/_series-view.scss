@@ -1,29 +1,32 @@
-.series-view__description {
+.series-details__description {
   position: relative;
-  height: $series-view-description-height;
+  height: $series-details-height;
   @include border-radius($view-movie-block-border-radius);
   background-repeat: no-repeat;
   background-size: cover;
+
+  > .container {
+    padding-right: 0;
+  }
 }
 
-.series-view__description-poster {
+.series-details__description-poster {
   height: 270px;
   width: 180px;
   margin-top: 20px;
   position: relative;
-  z-index: 3;
 
   img {
     @include border-radius($poster-border-radius);
   }
 }
 
-.series-view__description-title {
+.series-details__description-title {
   margin-bottom: 0;
   margin-top: 10px;
 }
 
-.series-view__description-data {
+.series-details__description-data {
   margin-bottom: 10px;
 
   span {
@@ -37,21 +40,89 @@
   }
 }
 
-.series-view__description-text {
+.series-details__description-text {
   position: relative;
-  z-index: 3;
   margin-bottom: 0;
   color: #ffffff;
   max-height: 245px;
   overflow-y: hidden;
 }
 
-.series-view__description-transparent-bg {
+.series-details__description-transparent-bg {
   position: absolute;
   width: 100%;
-  height: $series-view-description-height;
+  height: $series-details-height;
   top: 0;
   left: 0;
   background: rgba(10, 10, 10, .5);
   @include border-radius($view-movie-block-border-radius);
+}
+
+.series-details__seasons-list, .series-details__episodes-list {
+  list-style-type: none;
+
+  li a {
+    text-decoration: none;
+    color: #cccccc;
+    display: block;
+    padding-left: 10px;
+  }
+}
+
+.series-details__seasons, .series-details__episodes {
+  height: $series-details-height;
+  overflow-y: hidden;
+  background-color: rgba(0, 0, 0, .4);
+}
+
+.series-details__seasons-list li a {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-left: 3px transparent solid;
+
+  &:hover {
+    color: #fff;
+  }
+
+  &.active {
+    border-left-color: #fff;
+    color: #fff;
+  }
+}
+
+.series-details__episodes-list li{
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.series-details__episodes-list li a {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-left: 3px #000 solid;
+  height: 100px;
+  background: url("../img/episode-transparent-bg.png") no-repeat top left;
+
+  &:hover {
+    color: #fff;
+  }
+
+  &.active {
+    border-left-color: #fff;
+    color: #fff;
+  }
+
+  span {
+    display: block;
+  }
+
+  .series-details__episode-duration {
+    font-size: 11px;
+    margin-bottom: 15px;
+  }
+
+  .series-details__episode-descrition {
+    font-size: 13px;
+    margin-top: 3px;
+    width: 70%;
+  }
 }
